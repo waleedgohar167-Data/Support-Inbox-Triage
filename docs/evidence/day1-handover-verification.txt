@@ -1,0 +1,44 @@
+Support Inbox Triage — Final handover verification
+Environment: assistant Linux workspace, not the candidate Windows environment.
+Recorded at: 2026-11-17T16:47:08+05:00
+Reviewed remote base: 3c8f22d4887a87c311a0146d43d73c62796dbacc
+Branch: feature/day1-block4-readme
+Purpose: verify the handed-over starter can run from a clean copy with no installed project dependencies.
+
+Source bytes compared with the initial committed starter ca80606:
+main.py: UNCHANGED; SHA-256 1f5e77c16f9bd0bc9f0aa1f870acb9667252d94359591bf76ce3f8ca6d46d433
+tests/test_smoke.py: UNCHANGED; SHA-256 1ed06985db05d7721ff631b567f5075bf3dc71f231bdefbc9d6c2ddf4a36186c
+data/inbox.csv: UNCHANGED; SHA-256 c71598b1127cef027186702eb4e2eea34d668d74b6bada4a022e095e69aeba4d
+data/invalid_inbox.csv: UNCHANGED; SHA-256 254d1f1b46222304dd32ad672862f2b40c44d140d20edbf84f130433ee5074e9
+
+$ python --version
+Python 3.12.14
+Exit code: 0
+
+$ python main.py
+Project setup OK — core ticket triage is not built yet.
+Exit code: 0
+
+$ python -m unittest discover -s tests -v
+test_python_runs (test_smoke.StarterSmokeTest.test_python_runs) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+Exit code: 0
+
+Remote observations captured during final preparation:
+{
+  "repository": {
+    "private": false,
+    "default_branch": "main",
+    "html_url": "https://github.com/waleedgohar167-Data/Support-Inbox-Triage"
+  },
+  "pull_requests": []
+}
+
+Result: setup command passed; 1 supplied test passed; 0 failures/errors.
+Limit: the supplied test asserts 1 + 1 == 2 and does not exercise main.py or ticket handling.
+This run does not establish candidate independent review, checkpoint email timing, or submission delivery.
+No runtime code, data, or tests were changed in the final block.

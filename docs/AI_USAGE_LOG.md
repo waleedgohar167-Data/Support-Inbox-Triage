@@ -54,6 +54,17 @@ The basic Git workflow is clear. The next area I want to understand more deeply 
 
 - Files and claims I personally checked: **[complete after review]**
 - Explanation or wording I changed: **[complete after review; write “none” only if accurate]**
-- My actual local verification evidence: **[file path or attached terminal output]**
+- My actual local verification evidence: [archived Windows terminal output](evidence/day1-windows-verification.txt), supplied by the candidate in the conversation.
 - Remaining uncertainty: **[specific point, or “none” after review]**
 
+
+
+## Final block — Reporting and handover assistance
+
+| Assistance used | Evidence and ownership | Remaining confirmation |
+| --- | --- | --- |
+| Consolidate the final report, review Git history, update documentation links, and prepare the update/source ZIPs. | The assistant verified the remote branch at `3c8f22d`, compared the source with the starter, and retained separate evidence for candidate Windows output and assistant execution. | Candidate personal-review fields and actual submission timing are not inferred from these checks. |
+| Preserve the local verification record. | Copied the candidate's actual pasted tool-version and application/test output into `docs/evidence/day1-windows-verification.txt`; no new Windows run or exit codes were invented. | Candidate may add the original execution times or sent-email evidence if available. |
+| Check reproducibility of the handover source. | Actual clean-copy assistant commands and outcomes are recorded in `docs/evidence/day1-handover-verification.txt`. | This does not prove the candidate's independent understanding or future ticket-classification behavior. |
+
+The candidate performed the Windows commands and local Git operations shown in the supplied terminal output. The personal-review fields above still need the candidate's own record; this final update does not mark them complete automatically.

@@ -13,11 +13,11 @@ Use these entries every working day. Do not claim work is complete without evide
 | Time | Status (DONE/PARTIAL/BLOCKED) | Evidence link or command result | Next action |
 |---|---|---|---|
 | 10:15 | PARTIAL | Technical review and assisted verification were prepared. | Continue with local evidence and remaining Day 1 blocks. |
-| 11:25 | | | |
+| 11:25 | DONE | [Candidate Windows output](evidence/day1-windows-verification.txt): Python/Git versions, setup message, and one passing test. | Retain the actual output; execution and email timestamps were not supplied. |
 | 12:25 | COMPLETE | Block 3 learning exercise documented in `docs/AI_USAGE_LOG.md`. Three technical concepts, three answers and one focused clarification point recorded. | Proceed to Block 4 documentation task. |
-| 14:20 | | | |
-| 15:30 | | | |
-| 16:25 | PARTIAL | [Block 6 review and draft answers](BLOCK6_REVIEW.md); [assistant verification](evidence/block6-assistant-verification.txt). Candidate independent review and local evidence remain pending. | Review and revise the five answers, add actual local verification, and complete the final handover. |
+| 14:20 | DONE | README improvement in `84c444d`, clarified during the review in `3c8f22d`; six-sentence introduction. | Include the accurate README in the final handover. |
+| 15:30 | PARTIAL | Candidate reports Block 5 complete; local app/test output and pushed documentation are verified. No PR is listed. | Submit the prepared offline package or an authorized PR; retain the actual submission evidence. |
+| 16:25 | PARTIAL | [Block 6 review](BLOCK6_REVIEW.md), [candidate Windows output](evidence/day1-windows-verification.txt), and pushed commit `3c8f22d`. Personal-review fields remain pending. | Complete personal review and the final handover record. |
 
 ### Block 3 — Learning to Use AI Professionally
 
@@ -41,7 +41,7 @@ Prepared against branch `feature/day1-block4-readme`, commit `84c444da0c7d5e171d
 - Restored the earlier workflow and project notes below from commit `ca806068c241bd573680a7d4c4aaf55defd7254d`. Their removal was found while comparing the worklog history. Existing Block 3 content was retained.
 - Application code, data, and the supplied test were left unchanged. Actual assistant-environment execution is recorded separately in [the verification transcript](evidence/block6-assistant-verification.txt).
 - The candidate reports completing Block 5. The reviewed GitHub snapshot does not include a Block 5 terminal transcript, and the earlier checkpoint rows remain unfilled. Existing local evidence should be added before the final report; no checkpoint times or outputs have been invented.
-- Candidate final review, any further corrections, and the final Git commit are pending. Update the 16:25 row after these actions are actually completed.
+- Follow-up during the final block: Block 6 commit `3c8f22d` is now verified on GitHub, and the candidate Windows output is archived. Personal-review confirmation and the final handover commit remain pending.
 
 ### Recovered Block 1 notes
 
@@ -75,3 +75,14 @@ The intended product will organize synthetic support messages through CSV input,
 | `.github/pull_request_template.md` | Change summary, test evidence, AI assistance, limitations, and review questions. |
 
 Day 2 clarification points remain non-blocking for today's documentation task: classification categories, priority and human-review rules, and how future input handling should treat blank IDs or messages. The [original verification transcript](evidence/block1-verification.txt) records an assistant Linux run; it is not a Windows execution record.
+
+
+### Final block — Daily report and handover
+
+- [Final report](DAY1_FINAL_REPORT.md) follows the assignment template and separates completed technical work from unconfirmed personal-review and delivery records.
+- [Windows verification](evidence/day1-windows-verification.txt) preserves the candidate's actual supplied output; it is not a newly generated Windows run.
+- [Handover verification](evidence/day1-handover-verification.txt) records the separate assistant check from a clean project copy.
+- The final report and offline source ZIP are prepared from `3c8f22d` plus the final documentation/evidence update. The application, test, and sample data remain unchanged.
+- Earlier checkpoint statuses describe the available work evidence as reconciled during final preparation. They do not assert that an email was sent at the scheduled time.
+- Overall status remains PARTIAL until the candidate records personal review and completes the final delivery. Actual checkpoint send times are unverified; no new timestamp is substituted for a historical one.
+- Next working day: clarify the Day 2 requirements and acceptance checks before implementing ticket handling.

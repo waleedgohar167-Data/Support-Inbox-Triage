@@ -5,7 +5,7 @@
 - **Reviewed branch:** `feature/day1-block4-readme`
 - **Reviewed commit:** `84c444da0c7d5e171d0e2ec21107ec4fdd5e2973`
 
-**Status:** PARTIAL — technical review and draft answers prepared; candidate independent review, local evidence, and final commit pending.
+**Status:** PARTIAL — technical review, candidate Windows execution evidence, and Block 6 commit are recorded; candidate independent-review confirmation remains pending.
 
 The questions below come from `DAY_1_EXECUTION.md`. These are AI-assisted draft answers grounded in the reviewed source. The candidate should explain them without relying on the wording, revise them into their own words, and complete the review record before submission. This document does not claim that an independent assessment or an on-time checkpoint has already occurred.
 
@@ -56,16 +56,21 @@ The missing classifier is an expected starter limitation, not a new runtime defe
 
 See [block6-assistant-verification.txt](evidence/block6-assistant-verification.txt) for the actual environment, execution time, commands, output, and exit codes. One passing arithmetic test does not establish application coverage, classification quality, or production readiness. The transcript records the assistant's execution, not the candidate's local verification.
 
-Candidate Windows verification should be saved separately as `docs/evidence/block6-local-verification.txt`, or linked to an existing accurately labeled record. Add the actual command output and exit codes; do not copy the assistant transcript under a local label.
+The candidate's supplied Windows output has now been archived separately in [day1-windows-verification.txt](evidence/day1-windows-verification.txt). It records the setup message and one passing test. Exact Windows execution timestamps and exit codes were not supplied. This supersedes the earlier missing local-record item without inventing a new run.
 
 ## Candidate completion record
 
-- Review completed at (actual date/time, PKT): **[pending]**
-- Answers reviewed and revised in my own words: **[pending]**
-- Files I personally checked: **[pending]**
-- Actual local run/test evidence: **[pending]**
-- Any remaining correction or blocker: **[pending]**
-- Final branch and commit: **[pending]**
-- Authorized PR link or offline submission evidence: **[pending]**
+- Review completed at (actual date/time, PKT): **[5:00 PM PKT]**
+- Answers reviewed and revised in my own words: **[All]**
+- Files I personally checked: **[All]**
+- Actual local run/test evidence: [candidate Windows transcript](evidence/day1-windows-verification.txt), supplied in the conversation and archived during final preparation.
+- Any remaining correction or blocker: **[NON]**
+- Block 6 branch and commit: `feature/day1-block4-readme`, `3c8f22d4887a87c311a0146d43d73c62796dbacc` (remote verified). The final handover commit is recorded separately in the submission email.
+- Submission route: offline source ZIP prepared; actual email/attachment delivery is not yet recorded. No PR was listed during final preparation.
 
 Update this document and the worklog status only after the relevant actions are complete. If an item remains unresolved, state it explicitly in the checkpoint and final report.
+
+
+## Final-block reconciliation
+
+The technical review table above describes the earlier `84c444d` snapshot. Subsequent evidence confirms that the update was committed and pushed as `3c8f22d`, and the candidate's actual Windows output is now archived. These updates resolve the local-evidence and Block 6 commit gaps. They do not establish personal review, checkpoint email timing, or a completed final submission. See [DAY1_FINAL_REPORT.md](DAY1_FINAL_REPORT.md) for the consolidated handover position.
