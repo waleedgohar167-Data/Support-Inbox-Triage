@@ -12,65 +12,22 @@ Use these entries every working day. Do not claim work is complete without evide
 ### Block checkpoints
 | Time | Status (DONE/PARTIAL/BLOCKED) | Evidence link or command result | Next action |
 |---|---|---|---|
-| 10:15 | PARTIAL | Technical review below is prepared; [assisted verification transcript](evidence/block1-verification.txt). Candidate review remains pending. | Review the source and explanation, update status when reviewed, then capture local setup and execution evidence for Block 2. |
+| 10:15 | PARTIAL | Technical review and assisted verification were prepared. | Continue with local evidence and remaining Day 1 blocks. |
 | 11:25 | | | |
-| 12:25 | | | |
+| 12:25 | COMPLETE | Block 3 learning exercise documented in `docs/AI_USAGE_LOG.md`. Three technical concepts, three answers and one focused clarification point recorded. | Proceed to Block 4 documentation task. |
 | 14:20 | | | |
 | 15:30 | | | |
 | 16:25 | | | |
 
-### Block 1 — Workflow and project review
+### Block 3 — Learning to Use AI Professionally
 
-| Stage | Meaning for this project |
-| --- | --- |
-| Requirement | Identify the requested result: today, explain the starter accurately in 4–6 README sentences and provide verification evidence. |
-| Investigation | Read the instructions, code, sample data and test before deciding what the project already does. |
-| Planning | Decide which facts belong in the README and how the small documentation change will be checked. |
-| Implementation | Make the planned documentation change on a working branch. |
-| Testing | Run the application and supplied test, then record their actual results and what those checks cover. |
-| Review | Compare the README with the code and inspect the diff for mistakes or unsupported claims. |
-| Completion | Record the change in Git and submit the evidence through an authorized repository or the documented offline route. |
+The AI exercise was used to understand how Git, GitHub, branches, commits and pull requests fit into a professional engineering workflow. The concepts were related directly to this project's expected workflow rather than treated as isolated definitions.
 
-Support Inbox Triage is a training project for organizing incoming support messages. Its intended future workflow is to read synthetic tickets from CSV, classify them, identify cases needing human review, and export an organized CSV. These features are planned, as the README and execution guide explicitly state.
+Three higher-level concepts were recorded:
+1. Git as a distributed version-control system.
+2. Branches and commits as controlled, traceable change units.
+3. Pull requests as a verification and review boundary.
 
-The current application only prints:
+The exercise also produced three understanding questions and answers based on the project's workflow. The remaining clarification point concerns how larger teams combine branch protection, CI checks, review requirements and merge strategies.
 
-```text
-Project setup OK — core ticket triage is not built yet.
-```
-
-It does not read either CSV, classify messages, determine priority, flag human review, or export results. The provided test only checks arithmetic. Passing it shows that this Python/unittest check ran successfully; it does not test `main.py` or prove any ticket-processing behavior.
-
-Today’s implementation task is a small README improvement. Day 2 is reserved for defining detailed requirements, so classification rules should not be invented or described as already implemented.
-
-| File | Confirmed role |
-| --- | --- |
-| `DAY_1_EXECUTION.md` | Day 1 scope, schedule, checkpoint format, understanding questions and final report template. |
-| `SETUP_AND_GIT_GUIDE.md` | Standard-library setup, execution commands, local Git workflow and offline submission route. |
-| `README.md` | Identifies the project as a starter and describes future CSV triage features. |
-| `main.py` | Defines `main()`, which prints one setup message; the entry-point guard calls it when run directly. |
-| `data/inbox.csv` | Twelve synthetic tickets, with `ticket_id` and `message` columns. |
-| `data/invalid_inbox.csv` | Four sample rows; data row 2 has no ID and data row 3 has no message. |
-| `tests/test_smoke.py` | One `unittest` assertion that `1 + 1 == 2`; it neither imports nor exercises the application. |
-| `docs/REQUIREMENTS.md` | Day 2 template; classification, priority, human-review and error-handling rules remain to be defined. |
-| `docs/WORKLOG.md` | Checkpoint progress and end-of-day reporting template. |
-| `docs/AI_USAGE_LOG.md` | Records meaningful AI assistance and the candidate's own checks. |
-| `.gitignore` | Excludes common Python caches, virtual environments, environment files and generated output. |
-| `.github/pull_request_template.md` | Review template covering the change, tests, AI assistance, limitations and reviewer questions. |
-
-### Questions and verification limits
-
-- **Answered:** The app currently prints a setup message; CSV loading and ticket triage are not implemented.
-- **Answered:** The main CSV has 12 synthetic records and two columns: `ticket_id` and `message`.
-- **Answered:** The smoke test checks arithmetic only and does not exercise the app.
-- **Non-blocking for Day 1:** Which classification categories, priority rules and human-review conditions will be adopted on Day 2?
-- **Non-blocking for Day 1:** How should blank IDs, blank messages and other invalid rows be handled once input processing is implemented?
-
-The attached transcript was generated in an assisted Linux verification environment. It records one passing arithmetic test, not a test of ticket triage. Candidate Windows execution and personal review have not yet been recorded. The application, sample data, test and README remain unchanged.
-
-### 16:40–17:00 end-of-day report
-- Completed:
-- Tests and actual results:
-- Not completed / why:
-- What I learned:
-- First action tomorrow:
+The starter application's recorded verification showed a successful application run and one passing supplied test. This is correctly interpreted as verification of the starter checks, not evidence that ticket triage has been implemented.
