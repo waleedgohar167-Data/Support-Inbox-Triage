@@ -42,3 +42,18 @@ A pull request is a review mechanism, not proof that the change works. Verificat
 
 The basic Git workflow is clear. The next area I want to understand more deeply is how larger teams combine branch protection, automated CI checks, review requirements and merge strategies when multiple developers are working on the same repository.
 
+## Block 6 — AI-assisted review and preparation
+
+| Date / task | Assistance used | Verification and ownership | Status |
+| --- | --- | --- | --- |
+| 17 November 2026 — Repository review | Read the pushed branch, assignment, code, data, test, documentation, and Git history; identify documentation and evidence gaps. | The assistant checked the source at `84c444d` and recovered removed notes from `ca80606`. Candidate review of the findings is pending. | Technical review prepared. |
+| 17 November 2026 — Documentation correction | Clarify the README and prepare the five understanding answers and review record. | Answers are explicitly drafts for the candidate to review, explain, and revise in their own words. No independent candidate assessment is claimed. | Candidate review pending. |
+| 17 November 2026 — Verification and packaging | Execute the unchanged starter and supplied test, record actual output, and prepare a checked patch for local application. | Execution in `docs/evidence/block6-assistant-verification.txt` is from the assistant's Linux environment. It is not a substitute for the candidate's Windows evidence. | See transcript; local application and final verification pending. |
+
+### Candidate follow-up
+
+- Files and claims I personally checked: **[complete after review]**
+- Explanation or wording I changed: **[complete after review; write “none” only if accurate]**
+- My actual local verification evidence: **[file path or attached terminal output]**
+- Remaining uncertainty: **[specific point, or “none” after review]**
+

@@ -1,0 +1,48 @@
+Support Inbox Triage — Block 6 assistant verification
+Environment: assistant Linux workspace; NOT the candidate Windows environment.
+Recorded at: 2026-11-17T16:11:26.252911+05:00
+Reviewed base commit: 84c444da0c7d5e171d0e2ec21107ec4fdd5e2973
+Working branch: feature/day1-block4-readme
+Scope: documentation review and corrected documentation; application, data, and test preserved.
+Platform: Linux
+
+$ python --version
+Python 3.12.14
+Exit code: 0
+
+$ git --version
+git version 2.52.0
+Exit code: 0
+
+$ python main.py
+Project setup OK — core ticket triage is not built yet.
+Exit code: 0
+
+$ python -m unittest discover -s tests -v
+test_python_runs (test_smoke.StarterSmokeTest.test_python_runs) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+OK
+Exit code: 0
+
+$ git diff --check
+(no output)
+Exit code: 0
+
+Source preservation check (byte comparison against committed starter ca80606):
+main.py: UNCHANGED; SHA-256 1f5e77c16f9bd0bc9f0aa1f870acb9667252d94359591bf76ce3f8ca6d46d433
+tests/test_smoke.py: UNCHANGED; SHA-256 1ed06985db05d7721ff631b567f5075bf3dc71f231bdefbc9d6c2ddf4a36186c
+data/inbox.csv: UNCHANGED; SHA-256 c71598b1127cef027186702eb4e2eea34d668d74b6bada4a022e095e69aeba4d
+data/invalid_inbox.csv: UNCHANGED; SHA-256 254d1f1b46222304dd32ad672862f2b40c44d140d20edbf84f130433ee5074e9
+
+Result: application exited 0; 1 supplied test passed; 0 test failures/errors.
+Limitation: the test checks only that 1 + 1 == 2. It does not execute main.py or check ticket triage.
+Candidate independent review, local evidence, and remote publication of this update are not claimed.
+
+Final documentation check (including new files after git add -N):
+Removed four Markdown hard-break trailing spaces found in the new review header.
+$ git diff --check
+(no output)
+Exit code: 0
