@@ -1,0 +1,24 @@
+Environment: Linux / Python 3.12.14 (assistant verification environment)
+Recorded at: 2026-11-17T11:47:02.324327+05:00
+
+$ python --version
+Python 3.12.14
+Exit code: 0
+
+$ git --version
+git version 2.52.0
+Exit code: 0
+
+$ python main.py
+Project setup OK — core ticket triage is not built yet.
+Exit code: 0
+
+$ python -m unittest discover -s tests -v
+test_python_runs (test_smoke.StarterSmokeTest.test_python_runs) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+Exit code: 0
+
