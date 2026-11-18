@@ -1,27 +1,20 @@
 # Work Log
 
-## Day 2 - Block C
+## Day 2 - Block D
 
-**Status:** COMPLETE  
-**Block:** Requirements Specification & Acceptance Criteria  
+**Status:** COMPLETE
+**Block:** Edge Cases, Risks & AI Audit
 **Approval:** PENDING REVIEW
 
 ### Completed
-- Defined V1 input contract for `data/inbox.csv`.
-- Defined V1 output contract for `output/triaged.csv`.
-- Formalized category precedence and matching rules.
-- Formalized priority triggers.
-- Formalized human-review routing.
-- Defined reply-draft safety constraints.
-- Defined validation and error-handling requirements.
-- Defined explicit safety/scope boundaries.
-- Added 25 measurable acceptance criteria.
-- Added known boundary questions requiring supervisor review.
+- Added 25 edge cases covering input, matching, precedence, priority, review routing, encoding, duplicates, and reproducibility.
+- Identified the top five V1 risks with impact, likelihood, and mitigation.
+- Completed AI audit covering assistance used, human verification, AI failure modes, and controls.
+- Cross-checked Block D against Block B adversarial cases and Block C requirements.
+- No production implementation performed.
 
 ### Verification
-- Requirements cross-checked against the Day 2 V1 policy.
-- Requirements cross-checked against Block B expected/adversarial behavior.
-- AI-assisted drafting was personally reviewed and constrained to the approved V1 scope.
+The matrix was reviewed for coverage of the major ambiguity classes and consistency with the deterministic V1 policy.
 
 ### Next
-Proceed to Block D: edge cases, top risks, and AI audit.
+Proceed to Block E: technical issues, acceptance-criteria traceability, dependencies, review package, and Git evidence.
