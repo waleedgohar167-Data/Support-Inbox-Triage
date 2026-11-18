@@ -1,0 +1,7 @@
+case_id,message,category,priority,needs_human_review,reasoning
+A01,Please send an invoice; my account is locked.,billing,high,true,billing takes precedence over account; locked is a high-priority trigger.
+A02,My payment failed and my account shows an error.,billing,normal,false,payment matches billing and billing takes precedence over account and error; no listed high-priority trigger is present.
+A03,I cannot access the dashboard.,other,high,true,"dashboard is not a category keyword; 'cannot access' is a high-priority trigger, so category is other and review is required."
+A04,"This is not urgent, but I need help with an urgent billing issue.",billing,high,true,literal matching of 'urgent' triggers high priority; this exposes a negation/semantic false-positive risk.
+A05,Can someone explain what happens after I submit a request?,other,normal,true,"no proposed billing/account/technical keyword is present, so category is other and review is required."
+A06,I was charged twice and I need to reset my password.,billing,high,true,billing takes precedence over account; 'charged twice' triggers high priority.

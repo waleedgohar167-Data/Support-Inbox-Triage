@@ -1,31 +1,29 @@
-# Day 2 Block A — Worklog
+# Day 2 Block B — Worklog
 
-## Kickoff
+## Independent predictions
 
 **Day:** 2  
-**Block:** A  
+**Block:** B  
 **Status:** COMPLETE  
 **Approval state:** PENDING REVIEW
 
-### Plan
-1. Verify the Day 1 baseline and repository state.
-2. Convert the proposed Version 1 policy into explicit clarification questions.
-3. Separate blocking decisions from non-blocking clarification.
-4. Define the business problem, non-goals, and measurable success signals.
-5. Record proposed decisions without claiming supervisor approval.
+### Completed
+- Produced all 12 structured sample-ticket predictions.
+- Produced six adversarial scenarios with category, priority, human-review decision, and reasoning.
+- Applied the proposed literal category precedence and priority triggers.
+- Preserved counterintuitive outcomes as analysis risks rather than changing the policy.
+- Added safe fixed reply drafts without promising unsupported actions.
 
-### First risk
-The largest early risk is implementing ambiguous matching and invalid-input behavior before the stakeholder has explicitly approved those semantics. This could make later tests appear correct while encoding the wrong business rule.
+### Verification
+The CSV artifacts were regenerated with explicit headers and validated for the required row counts and fields.
 
 ### Evidence
-- Day 1 baseline was checked by the candidate before continuing Day 2.
-- Block A produced `docs/day2/DECISION_LOG.md`.
-- Twelve prioritized clarification questions were recorded.
-- Six questions are marked BLOCKING, exceeding the required minimum of five.
-- Proposed decisions are explicitly marked `PENDING REVIEW`.
+- `docs/day2/EXPECTED_OUTPUTS.csv`
+- `docs/day2/ADVERSARIAL_CASES.csv`
+- `docs/day2/BLOCK_B_EVIDENCE_NOTES.md`
 
-### Integrity note
-No implementation was added in Block A. No supervisor approval is claimed.
+### AI + personal verification
+AI assistance was used to identify malformed records and structure the corrected artifacts. The final classifications, priorities, review flags, and reasoning were independently checked against the stated Version 1 rules.
 
 ### Next
-Block B: independently predict all 12 sample outputs and six adversarial cases using the proposed literal rules.
+Proceed to Block C: finalize `docs/REQUIREMENTS.md` with exact schemas, assumptions, safe drafts, limitations, invalid-input behavior, and at least 15 objectively testable acceptance criteria.
