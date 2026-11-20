@@ -1,0 +1,283 @@
+diff --git a/docs/AI_USAGE_LOG.md b/docs/AI_USAGE_LOG.md
+index b95d684..5ff6161 100644
+--- a/docs/AI_USAGE_LOG.md
++++ b/docs/AI_USAGE_LOG.md
+@@ -54,6 +54,17 @@ The basic Git workflow is clear. The next area I want to understand more deeply
+ 
+ - Files and claims I personally checked: **[complete after review]**
+ - Explanation or wording I changed: **[complete after review; write “none” only if accurate]**
+-- My actual local verification evidence: **[file path or attached terminal output]**
++- My actual local verification evidence: [archived Windows terminal output](evidence/day1-windows-verification.txt), supplied by the candidate in the conversation.
+ - Remaining uncertainty: **[specific point, or “none” after review]**
+ 
++
++
++## Final block — Reporting and handover assistance
++
++| Assistance used | Evidence and ownership | Remaining confirmation |
++| --- | --- | --- |
++| Consolidate the final report, review Git history, update documentation links, and prepare the update/source ZIPs. | The assistant verified the remote branch at `3c8f22d`, compared the source with the starter, and retained separate evidence for candidate Windows output and assistant execution. | Candidate personal-review fields and actual submission timing are not inferred from these checks. |
++| Preserve the local verification record. | Copied the candidate's actual pasted tool-version and application/test output into `docs/evidence/day1-windows-verification.txt`; no new Windows run or exit codes were invented. | Candidate may add the original execution times or sent-email evidence if available. |
++| Check reproducibility of the handover source. | Actual clean-copy assistant commands and outcomes are recorded in `docs/evidence/day1-handover-verification.txt`. | This does not prove the candidate's independent understanding or future ticket-classification behavior. |
++
++The candidate performed the Windows commands and local Git operations shown in the supplied terminal output. The personal-review fields above still need the candidate's own record; this final update does not mark them complete automatically.
+diff --git a/docs/BLOCK6_REVIEW.md b/docs/BLOCK6_REVIEW.md
+index 0886ea3..f26ee94 100644
+--- a/docs/BLOCK6_REVIEW.md
++++ b/docs/BLOCK6_REVIEW.md
+@@ -5,7 +5,7 @@
+ - **Reviewed branch:** `feature/day1-block4-readme`
+ - **Reviewed commit:** `84c444da0c7d5e171d0e2ec21107ec4fdd5e2973`
+ 
+-**Status:** PARTIAL — technical review and draft answers prepared; candidate independent review, local evidence, and final commit pending.
++**Status:** PARTIAL — technical review, candidate Windows execution evidence, and Block 6 commit are recorded; candidate independent-review confirmation remains pending.
+ 
+ The questions below come from `DAY_1_EXECUTION.md`. These are AI-assisted draft answers grounded in the reviewed source. The candidate should explain them without relying on the wording, revise them into their own words, and complete the review record before submission. This document does not claim that an independent assessment or an on-time checkpoint has already occurred.
+ 
+@@ -56,16 +56,21 @@ The missing classifier is an expected starter limitation, not a new runtime defe
+ 
+ See [block6-assistant-verification.txt](evidence/block6-assistant-verification.txt) for the actual environment, execution time, commands, output, and exit codes. One passing arithmetic test does not establish application coverage, classification quality, or production readiness. The transcript records the assistant's execution, not the candidate's local verification.
+ 
+-Candidate Windows verification should be saved separately as `docs/evidence/block6-local-verification.txt`, or linked to an existing accurately labeled record. Add the actual command output and exit codes; do not copy the assistant transcript under a local label.
++The candidate's supplied Windows output has now been archived separately in [day1-windows-verification.txt](evidence/day1-windows-verification.txt). It records the setup message and one passing test. Exact Windows execution timestamps and exit codes were not supplied. This supersedes the earlier missing local-record item without inventing a new run.
+ 
+ ## Candidate completion record
+ 
+ - Review completed at (actual date/time, PKT): **[pending]**
+ - Answers reviewed and revised in my own words: **[pending]**
+ - Files I personally checked: **[pending]**
+-- Actual local run/test evidence: **[pending]**
++- Actual local run/test evidence: [candidate Windows transcript](evidence/day1-windows-verification.txt), supplied in the conversation and archived during final preparation.
+ - Any remaining correction or blocker: **[pending]**
+-- Final branch and commit: **[pending]**
+-- Authorized PR link or offline submission evidence: **[pending]**
++- Block 6 branch and commit: `feature/day1-block4-readme`, `3c8f22d4887a87c311a0146d43d73c62796dbacc` (remote verified). The final handover commit is recorded separately in the submission email.
++- Submission route: offline source ZIP prepared; actual email/attachment delivery is not yet recorded. No PR was listed during final preparation.
+ 
+ Update this document and the worklog status only after the relevant actions are complete. If an item remains unresolved, state it explicitly in the checkpoint and final report.
++
++
++## Final-block reconciliation
++
++The technical review table above describes the earlier `84c444d` snapshot. Subsequent evidence confirms that the update was committed and pushed as `3c8f22d`, and the candidate's actual Windows output is now archived. These updates resolve the local-evidence and Block 6 commit gaps. They do not establish personal review, checkpoint email timing, or a completed final submission. See [DAY1_FINAL_REPORT.md](DAY1_FINAL_REPORT.md) for the consolidated handover position.
+diff --git a/docs/DAY1_FINAL_REPORT.md b/docs/DAY1_FINAL_REPORT.md
+new file mode 100644
+index 0000000..772bcd8
+--- /dev/null
++++ b/docs/DAY1_FINAL_REPORT.md
+@@ -0,0 +1,88 @@
++# Day 1 — Final report and handover
++
++**Candidate:** Waleed Khan
++
++**Project/date:** Support Inbox Triage — 17 November 2026
++
++**Overall status:** PARTIAL — documentation, execution evidence, and handover preparation are complete; the personal-review confirmation is still unrecorded in the reviewed commit.
++
++## README change summary
++
++The six-sentence introduction explains the business problem, synthetic dataset, planned workflow, current behavior, and run/test commands. It states precisely that the starter prints a setup message and the supplied test checks arithmetic. CSV loading, classification, human-review decisions, and export are planned features outside today's implementation task.
++
++## Completed work and files
++
++- `README.md`: accurate project explanation and commands.
++- `docs/WORKLOG.md`: workflow, file map, checkpoint evidence, restored earlier notes, and next actions.
++- `docs/AI_USAGE_LOG.md`: recorded Git learning exercise, three concepts/answers, clarification point, and specific assistance.
++- `docs/BLOCK6_REVIEW.md`: five draft answers, technical review, and personal-review record.
++- `docs/evidence/day1-windows-verification.txt`: actual candidate-supplied terminal excerpts, now preserved.
++- `docs/evidence/day1-handover-verification.txt`: separate assistant clean-copy verification.
++- This report and a complete source ZIP for offline review.
++
++The final update changes the three review/log documents and adds this report plus two evidence files. Application code, the supplied test, sample CSVs, and the reviewed README are unchanged by the final update.
++
++## Actual commands and results
++
++Candidate Windows output:
++
++```text
++python main.py
++Project setup OK — core ticket triage is not built yet.
++
++python -m unittest discover -s tests -v
++test_python_runs (test_smoke.StarterSmokeTest.test_python_runs) ... ok
++Ran 1 test in 0.001s
++OK
++```
++
++**Result:** 1 passing test; 0 failures/errors reported. Earlier supplied versions: Python 3.13.5 and Git 2.47.1.windows.1. Exact Windows execution timestamps and exit codes were not supplied.
++
++The test only asserts `1 + 1 == 2`; it does not run the application or prove ticket classification. The separate [clean-copy transcript](evidence/day1-handover-verification.txt) records assistant Linux execution and source-preservation checks.
++
++## Git and delivery evidence
++
++- [Repository branch](https://github.com/waleedgohar167-Data/Support-Inbox-Triage/tree/feature/day1-block4-readme): `feature/day1-block4-readme`.
++- Remotely verified base: [`3c8f22d`](https://github.com/waleedgohar167-Data/Support-Inbox-Triage/commit/3c8f22d4887a87c311a0146d43d73c62796dbacc). Earlier checkpoints: `ca80606` (starter/setup), `819c452` (learning exercise), `84c444d` (README).
++- **Final commit:** record the actual hash containing this report in the submission email after committing; obtain it with `git rev-parse --short HEAD`. The reviewed base is not the uncommitted final update's hash.
++- **PR:** none listed during final preparation. A pushed branch is not a PR or an approved merge.
++- **Offline package:** `Support_Inbox_Triage_Day1_Handover.zip`, containing source, documentation, and evidence without `.git`, caches, or instruction folders. It represents the base plus this final update; regenerate it from the final commit after any personal-review edits.
++- **Route:** an authorized private company repository has not been confirmed; the observed personal repository is public. The source ZIP provides the guide's offline handover option. Actual email delivery is not claimed.
++
++## Six checkpoints and timing
++
++| Scheduled time | Available evidence | Record still needed |
++| --- | --- | --- |
++| 10:15 AM | Workflow/file notes; `ca80606`. | Personal review and email send time. |
++| 11:25 AM | Candidate tool versions, setup output, and passing test. | Email send time. |
++| 12:25 PM | Learning exercise and AI log; `819c452`. | Email send time. |
++| 2:20 PM | README improvement; `84c444d`. | Email send time. |
++| 3:30 PM | Successful local output; committed documentation; candidate reports Block 5 complete. | Authorized PR or actual offline handover; email send time. |
++| 4:25 PM | Review, corrections, and pushed `3c8f22d`. | Personal-review confirmation and email send time. |
++
++**All six sent on time?** Not verified. Scheduled labels and commits do not establish email timestamps. Add actual sent-email records if available; no historical times are invented.
++
++## What I learned — three recorded concepts
++
++1. Git records local history; GitHub hosts repositories and adds collaboration tools.
++2. Branches separate work, commits record staged changes, and pull requests request review and integration.
++3. Verification must support the specific claim: an arithmetic test does not prove application behavior, and a dataset's presence does not prove loading exists.
++
++## AI assistance and personal verification
++
++AI supported explanations, documentation, troubleshooting, source comparison, packaging, and reporting. The candidate supplied actual Windows output and performed the shown local Git operations. Assistant execution is labeled separately. Personal-review confirmation belongs in [the Block 6 completion record](BLOCK6_REVIEW.md#candidate-completion-record); it is not inferred from a successful commit.
++
++## Problems and resolution
++
++- Missing/truncated extraction paths: corrected; subsequent local execution succeeded.
++- Earlier notes removed during a documentation update: recovered from Git history.
++- Patch checked without application, plus an extra blank line: applied with whitespace correction.
++- Commit attempted without staged files: explicitly staged the existing files and committed/pushed `3c8f22d`.
++
++## Unfinished work and next action
++
++No unresolved execution failure is shown. Complete the personal-review fields, reconcile the current report/worklog status, create the final commit, and submit the source package. Checkpoint timing can remain explicitly unverified if the records are unavailable. Planned triage features are intentional future scope, not unfinished Day 1 coding tasks.
++
++**First action tomorrow:** review `docs/REQUIREMENTS.md`; clarify categories, output, human-review conditions, and invalid-row behavior; agree at least six acceptance checks before implementation.
++
++Report prepared at 2026-11-17T16:44:05+05:00; this records preparation, not an email submission time.
+diff --git a/docs/WORKLOG.md b/docs/WORKLOG.md
+index 1511ab8..ac3d727 100644
+--- a/docs/WORKLOG.md
++++ b/docs/WORKLOG.md
+@@ -13,11 +13,11 @@ Use these entries every working day. Do not claim work is complete without evide
+ | Time | Status (DONE/PARTIAL/BLOCKED) | Evidence link or command result | Next action |
+ |---|---|---|---|
+ | 10:15 | PARTIAL | Technical review and assisted verification were prepared. | Continue with local evidence and remaining Day 1 blocks. |
+-| 11:25 | | | |
++| 11:25 | DONE | [Candidate Windows output](evidence/day1-windows-verification.txt): Python/Git versions, setup message, and one passing test. | Retain the actual output; execution and email timestamps were not supplied. |
+ | 12:25 | COMPLETE | Block 3 learning exercise documented in `docs/AI_USAGE_LOG.md`. Three technical concepts, three answers and one focused clarification point recorded. | Proceed to Block 4 documentation task. |
+-| 14:20 | | | |
+-| 15:30 | | | |
+-| 16:25 | PARTIAL | [Block 6 review and draft answers](BLOCK6_REVIEW.md); [assistant verification](evidence/block6-assistant-verification.txt). Candidate independent review and local evidence remain pending. | Review and revise the five answers, add actual local verification, and complete the final handover. |
++| 14:20 | DONE | README improvement in `84c444d`, clarified during the review in `3c8f22d`; six-sentence introduction. | Include the accurate README in the final handover. |
++| 15:30 | PARTIAL | Candidate reports Block 5 complete; local app/test output and pushed documentation are verified. No PR is listed. | Submit the prepared offline package or an authorized PR; retain the actual submission evidence. |
++| 16:25 | PARTIAL | [Block 6 review](BLOCK6_REVIEW.md), [candidate Windows output](evidence/day1-windows-verification.txt), and pushed commit `3c8f22d`. Personal-review fields remain pending. | Complete personal review and the final handover record. |
+ 
+ ### Block 3 — Learning to Use AI Professionally
+ 
+@@ -41,7 +41,7 @@ Prepared against branch `feature/day1-block4-readme`, commit `84c444da0c7d5e171d
+ - Restored the earlier workflow and project notes below from commit `ca806068c241bd573680a7d4c4aaf55defd7254d`. Their removal was found while comparing the worklog history. Existing Block 3 content was retained.
+ - Application code, data, and the supplied test were left unchanged. Actual assistant-environment execution is recorded separately in [the verification transcript](evidence/block6-assistant-verification.txt).
+ - The candidate reports completing Block 5. The reviewed GitHub snapshot does not include a Block 5 terminal transcript, and the earlier checkpoint rows remain unfilled. Existing local evidence should be added before the final report; no checkpoint times or outputs have been invented.
+-- Candidate final review, any further corrections, and the final Git commit are pending. Update the 16:25 row after these actions are actually completed.
++- Follow-up during the final block: Block 6 commit `3c8f22d` is now verified on GitHub, and the candidate Windows output is archived. Personal-review confirmation and the final handover commit remain pending.
+ 
+ ### Recovered Block 1 notes
+ 
+@@ -75,3 +75,14 @@ The intended product will organize synthetic support messages through CSV input,
+ | `.github/pull_request_template.md` | Change summary, test evidence, AI assistance, limitations, and review questions. |
+ 
+ Day 2 clarification points remain non-blocking for today's documentation task: classification categories, priority and human-review rules, and how future input handling should treat blank IDs or messages. The [original verification transcript](evidence/block1-verification.txt) records an assistant Linux run; it is not a Windows execution record.
++
++
++### Final block — Daily report and handover
++
++- [Final report](DAY1_FINAL_REPORT.md) follows the assignment template and separates completed technical work from unconfirmed personal-review and delivery records.
++- [Windows verification](evidence/day1-windows-verification.txt) preserves the candidate's actual supplied output; it is not a newly generated Windows run.
++- [Handover verification](evidence/day1-handover-verification.txt) records the separate assistant check from a clean project copy.
++- The final report and offline source ZIP are prepared from `3c8f22d` plus the final documentation/evidence update. The application, test, and sample data remain unchanged.
++- Earlier checkpoint statuses describe the available work evidence as reconciled during final preparation. They do not assert that an email was sent at the scheduled time.
++- Overall status remains PARTIAL until the candidate records personal review and completes the final delivery. Actual checkpoint send times are unverified; no new timestamp is substituted for a historical one.
++- Next working day: clarify the Day 2 requirements and acceptance checks before implementing ticket handling.
+diff --git a/docs/evidence/day1-handover-verification.txt b/docs/evidence/day1-handover-verification.txt
+new file mode 100644
+index 0000000..438044b
+--- /dev/null
++++ b/docs/evidence/day1-handover-verification.txt
+@@ -0,0 +1,44 @@
++Support Inbox Triage — Final handover verification
++Environment: assistant Linux workspace, not the candidate Windows environment.
++Recorded at: 2026-11-17T16:47:08+05:00
++Reviewed remote base: 3c8f22d4887a87c311a0146d43d73c62796dbacc
++Branch: feature/day1-block4-readme
++Purpose: verify the handed-over starter can run from a clean copy with no installed project dependencies.
++
++Source bytes compared with the initial committed starter ca80606:
++main.py: UNCHANGED; SHA-256 1f5e77c16f9bd0bc9f0aa1f870acb9667252d94359591bf76ce3f8ca6d46d433
++tests/test_smoke.py: UNCHANGED; SHA-256 1ed06985db05d7721ff631b567f5075bf3dc71f231bdefbc9d6c2ddf4a36186c
++data/inbox.csv: UNCHANGED; SHA-256 c71598b1127cef027186702eb4e2eea34d668d74b6bada4a022e095e69aeba4d
++data/invalid_inbox.csv: UNCHANGED; SHA-256 254d1f1b46222304dd32ad672862f2b40c44d140d20edbf84f130433ee5074e9
++
++$ python --version
++Python 3.12.14
++Exit code: 0
++
++$ python main.py
++Project setup OK — core ticket triage is not built yet.
++Exit code: 0
++
++$ python -m unittest discover -s tests -v
++test_python_runs (test_smoke.StarterSmokeTest.test_python_runs) ... ok
++
++----------------------------------------------------------------------
++Ran 1 test in 0.000s
++
++OK
++Exit code: 0
++
++Remote observations captured during final preparation:
++{
++  "repository": {
++    "private": false,
++    "default_branch": "main",
++    "html_url": "https://github.com/waleedgohar167-Data/Support-Inbox-Triage"
++  },
++  "pull_requests": []
++}
++
++Result: setup command passed; 1 supplied test passed; 0 failures/errors.
++Limit: the supplied test asserts 1 + 1 == 2 and does not exercise main.py or ticket handling.
++This run does not establish candidate independent review, checkpoint email timing, or submission delivery.
++No runtime code, data, or tests were changed in the final block.
+diff --git a/docs/evidence/day1-windows-verification.txt b/docs/evidence/day1-windows-verification.txt
+new file mode 100644
+index 0000000..f098995
+--- /dev/null
++++ b/docs/evidence/day1-windows-verification.txt
+@@ -0,0 +1,27 @@
++Support Inbox Triage — Windows verification supplied by Waleed Khan
++Evidence provenance: copied from terminal output the candidate supplied in the conversation on 17 November 2026.
++This is an archived record of those outputs, not a new assistant-run Windows session.
++Exact execution timestamps and process exit codes were not supplied.
++The excerpts below came from separate messages; they are not presented as one continuous session.
++
++A. Earlier local tool-version output
++Python 3.13.5
++git version 2.47.1.windows.1
++
++B. Most recent complete application and test output supplied before applying the Block 6 documentation patch
++PS E:\Support Inbox Triage> python main.py
++>>
++Project setup OK — core ticket triage is not built yet.
++PS E:\Support Inbox Triage> python -m unittest discover -s tests -v
++test_python_runs (test_smoke.StarterSmokeTest.test_python_runs) ... ok
++
++----------------------------------------------------------------------
++Ran 1 test in 0.001s
++
++OK
++PS E:\Support Inbox Triage>
++
++Interpretation: the application printed its setup message; one supplied test passed with no failures or errors reported.
++Limit: the test only asserts that 1 + 1 == 2 and does not exercise the application or ticket handling.
++The initial and Block 6 commits contain identical main.py, tests/test_smoke.py, and CSV files.
++This record does not establish when a checkpoint email was sent or that an independent understanding assessment was completed.
