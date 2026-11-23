@@ -85,3 +85,13 @@ Later blocks must record the actual advice accepted or rejected, the candidate's
 Executed using Python 3.13.5 and Git 2.47.1.windows.1. Fresh baseline: 25 tests executed, 23 passed, 1 failure, 1 error. After application execution: all 25 passed. CSV verification confirmed the exact six-column schema, 12 records, preserved IDs/messages, and 3/3 prediction matches. Evidence: docs/day5/evidence/block-a-local-terminal-20261123-151340-018369.txt and block-a-local-inspection-20261123-151340-018369.json. This supersedes the earlier pending local-execution status; personal review and checkpoint submission remain separate.
 
 | 23 November 2026 - Day 5 Block D | Review the Day 5 Block C results and design an in-scope diagnostic exercise for Block D after no genuine defect was found. Help interpret the deliberately failing duplicate-ticket-ID test and structure the failure-investigation evidence. | Personally inspected `main.py`, the diagnostic test, and the actual Windows test output. Confirmed that duplicate-ID rejection is not established in the current contract and decided not to change production behavior solely to satisfy the exercise. | Diagnostic exercise completed. No genuine production defect confirmed. Duplicate-ID validation remains a potential future improvement if the contract requires it. |
+
+## Day 5 - Block E: Clean-Run Reproducibility
+
+| Date / task | Assistance used | Verification and ownership | Status |
+| --- | --- | --- | --- |
+| 23 November 2026 - README correction | Prepared updated README content describing the implemented workflow, schema, commands, assumptions, and limitation. | Candidate executed the update and verified the required README sections locally. | Verified |
+| 23 November 2026 - Clean-run validation | Prepared a PowerShell helper for removing generated output, executing the application, validating CSV output, and checking reproducibility. | Candidate executed the application and separately ran Python CSV validation after identifying a quoting issue in the helper. | Verified |
+| 23 November 2026 - Regression testing | Provided the documented production regression command. | Candidate terminal output showed 39 tests passed, with zero failures and zero errors. | Verified |
+
+The helper's embedded Python quoting issue was documented rather than represented as an application defect. The candidate remains responsible for understanding and reviewing the committed changes.

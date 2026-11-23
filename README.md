@@ -1,27 +1,72 @@
-# Support Inbox Triage — Training Project
+# Support Inbox Triage
 
-Support teams need to organize incoming customer messages so that requests can be categorized and directed to the right people. Support Inbox Triage is a training-only Python starter for a planned workflow that reads messages, classifies them, identifies cases needing human review, and exports an organized CSV. The synthetic messages in `data/inbox.csv` provide consistent examples for development and later testing without using real customer data. Currently, `main.py` only prints a setup message; CSV loading, classification, human-review decisions, and export are not implemented. With Python 3.11+ available, run the starter from the project folder using `python main.py` (or `py main.py` on Windows). Run `python -m unittest discover -s tests -v` for the supplied test, which only checks that `1 + 1 == 2` and does not execute `main.py` or test ticket handling.
-
-## Setup (Day 1)
-
-- Confirm Python 3.11+ and Git are available.
-- Open this folder in your code editor.
-- Run `python main.py` (on Windows, use `py main.py` if `python` does not work).
-- Run `python -m unittest discover -s tests -v`.
-- Before each new task after review/merge, switch to the default branch, pull, and create a new feature branch.
-
-## Never use real customer data
-
-The sample records are synthetic. Do not upload company/customer secrets, tokens, or private data to public AI tools.
-
-## Day 1 small task
-
-Using a feature branch, add your own 4–6 sentence explanation of what this training project will do and how to run the existing starter. If you have GitHub access, open a pull request; otherwise, use the offline submission option in `DAY_1_EXECUTION.md`.
+A Python training project that reads synthetic support tickets, classifies messages, assigns priorities, identifies tickets requiring human review, and exports the results to CSV.
 
 ## Requirements
 
-To be completed and reviewed on Day 2 in `docs/REQUIREMENTS.md`.
+- Python 3.11 or newer
+- No external packages required for the current workflow.
 
+## Workflow
+
+1. Read tickets from `data/inbox.csv`.
+2. Validate required columns: `ticket_id` and `message`.
+3. Categorize messages as billing, account, technical, or other.
+4. Assign high or normal priority.
+5. Determine whether human review is required.
+6. Generate a response draft.
+7. Export results to `output/triaged.csv`.
+
+## Run the application
+
+Run from the project root:
+
+```powershell
 python main.py
+```
 
-python -m unittest discover -s tests -v
+Input: `data/inbox.csv`
+
+Output: `output/triaged.csv`
+
+## Output schema
+
+The CSV contains exactly six columns in this order:
+
+1. `ticket_id`
+2. `message`
+3. `category`
+4. `priority`
+5. `needs_human_review`
+6. `reply_draft`
+
+## Run production regression tests
+
+Run from the project root:
+
+```powershell
+python -m unittest tests.test_day4_verification tests.test_day5_adversarial tests.test_day5_negative_inputs tests.test_export tests.test_priority tests.test_reader tests.test_review tests.test_smoke -v
+```
+
+The Block D diagnostic exercise is excluded because it investigates a potential duplicate-ID validation gap, not an established production requirement.
+
+## Data safety
+
+- Use synthetic training data only.
+- Do not include real customer information, credentials, or confidential company data.
+- Keep source data separate from generated output.
+
+## Environment assumptions
+
+- Python 3.11 or newer.
+- Commands are executed from the repository root.
+- `data/inbox.csv` is available.
+- The application writes to `output/triaged.csv`.
+
+## Known limitation
+
+Duplicate ticket IDs are not currently rejected by the CSV reader. This is documented as a potential improvement, not a confirmed defect under the current requirements.
+
+## Potential improvement
+
+Add duplicate-ID validation if the project requirements formally establish that ticket IDs must be unique.

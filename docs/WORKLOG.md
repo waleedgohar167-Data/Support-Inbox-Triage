@@ -39,3 +39,21 @@ Proceed to Block E: technical issues, acceptance-criteria traceability, dependen
 
 ### Windows verification update - 23 November 2026
 Executed using Python 3.13.5 and Git 2.47.1.windows.1. Fresh baseline: 25 tests executed, 23 passed, 1 failure, 1 error. After application execution: all 25 passed. CSV verification confirmed the exact six-column schema, 12 records, preserved IDs/messages, and 3/3 prediction matches. Evidence: docs/day5/evidence/block-a-local-terminal-20261123-151340-018369.txt and block-a-local-inspection-20261123-151340-018369.json. This supersedes the earlier pending local-execution status; personal review and checkpoint submission remain separate.
+
+## Day 5 - Block E: Clean-Run Reproducibility
+
+**Date:** 23 November 2026  
+**Status:** DONE - execution and validation checks passed
+
+- Updated README.md to describe the implemented application, input, output, schema, execution command, regression command, environment assumptions, known limitation, and potential improvement.
+- Removed only generated output `output/triaged.csv`; preserved `data/inbox.csv`.
+- Executed `python main.py` successfully. It loaded and exported 12 tickets.
+- Validated the exact six-column output schema and 12 nonblank ticket IDs/messages.
+- Repeated the application run and confirmed byte-for-byte identical output using matching SHA256 hashes.
+- Ran the documented production regression suite: 39 tests passed, zero failures, zero errors.
+- Recorded the duplicate-ID limitation without changing production behavior.
+- Documented a quoting defect in the supplied PowerShell helper; separate Python validation completed successfully.
+
+Evidence: `docs/day5/BLOCK_E_REPRODUCIBILITY.md`.
+
+Next: review the final diff, commit and push the Block E changes, then proceed to Block F.
