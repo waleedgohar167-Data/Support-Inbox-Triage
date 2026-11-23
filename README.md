@@ -1,4 +1,4 @@
-# Support Inbox Triage
+﻿# Support Inbox Triage
 
 A Python training project that reads synthetic support tickets, classifies messages, assigns priorities, identifies tickets requiring human review, and exports the results to CSV.
 
@@ -70,3 +70,4 @@ Duplicate ticket IDs are not currently rejected by the CSV reader. This is docum
 ## Potential improvement
 
 Add duplicate-ID validation if the project requirements formally establish that ticket IDs must be unique.
+

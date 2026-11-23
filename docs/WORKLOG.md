@@ -57,3 +57,14 @@ Executed using Python 3.13.5 and Git 2.47.1.windows.1. Fresh baseline: 25 tests 
 Evidence: `docs/day5/BLOCK_E_REPRODUCIBILITY.md`.
 
 Next: review the final diff, commit and push the Block E changes, then proceed to Block F.
+
+## Day 5 - Block F: Final Review and Handover
+
+**Date:** 23 November 2026
+**Status:** Handover prepared; final verification pending
+
+- Created docs/day5/BLOCK_F_HANDOVER.md with scope, verification evidence, known limitation, PR draft, and demo outline.
+- No merge into main was performed.
+- Final regression rerun, diff review, and Git verification remain pending.
+
+Evidence: docs/day5/BLOCK_F_HANDOVER.md.
