@@ -21,3 +21,7 @@ Using a feature branch, add your own 4–6 sentence explanation of what this tra
 ## Requirements
 
 To be completed and reviewed on Day 2 in `docs/REQUIREMENTS.md`.
+
+python main.py
+
+python -m unittest discover -s tests -v
