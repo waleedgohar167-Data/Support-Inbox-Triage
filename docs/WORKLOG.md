@@ -18,3 +18,24 @@ The matrix was reviewed for coverage of the major ambiguity classes and consiste
 
 ### Next
 Proceed to Block E: technical issues, acceptance-criteria traceability, dependencies, review package, and Git evidence.
+
+
+## Day 5 — 23 November 2026 — Kickoff and Block A
+
+**Scheduled evidence deadline:** 15:25 PKT; checkpoint window 15:25–15:30. Actual submission time is not yet recorded.
+
+**Status:** PARTIAL — assistant baseline audit prepared; candidate local verification, review, and checkpoint commit pending.
+
+- Confirmed pushed Day 4 baseline `71878b5e33c246fdbf6b2b7d68b008f8f82e2281` on `feature/day1-block4-readme`; candidate terminal output confirms the same local HEAD.
+- Preserved the candidate's uncommitted README addition of run/test commands.
+- Inspected the assertions in all 25 existing test methods.
+- Assistant fresh checkout: 25 executed, 23 passed, one assertion failure, one error; two tests require pre-existing generated output. After running the application: 25 executed and passed.
+- Reopened the regenerated CSV: exact six-column schema, 12 records, IDs/messages preserved in order, and three expected-versus-actual predictions matched across all fields.
+- Recorded confirmed defects/documentation drift separately from coverage gaps, potential risks, and unresolved policy details.
+- Evidence: [Block A audit](day5/BLOCK_A_AUDIT.md) and its linked transcripts/predictions. Local evidence will be written under `docs/day5/evidence/` by the package verification helper.
+- Next: complete local verification and the checkpoint, then proceed to Block B invalid-input cases.
+
+**Candidate completion record:** Local results reviewed — pending. Personal understanding/corrections — pending. Actual Day 5 branch and submitted commit — pending. Actual checkpoint send time — pending.
+
+### Windows verification update - 23 November 2026
+Executed using Python 3.13.5 and Git 2.47.1.windows.1. Fresh baseline: 25 tests executed, 23 passed, 1 failure, 1 error. After application execution: all 25 passed. CSV verification confirmed the exact six-column schema, 12 records, preserved IDs/messages, and 3/3 prediction matches. Evidence: docs/day5/evidence/block-a-local-terminal-20261123-151340-018369.txt and block-a-local-inspection-20261123-151340-018369.json. This supersedes the earlier pending local-execution status; personal review and checkpoint submission remain separate.

@@ -1,0 +1,182 @@
+{
+  "captured_on_candidate_machine": true,
+  "baseline": "71878b5e33c246fdbf6b2b7d68b008f8f82e2281",
+  "branch": "feature/day5-reliability",
+  "source_records": 12,
+  "pre_run_output_copy": "block-a-pre-run-output-20261123-151340-018369.csv",
+  "pre_run_inspection": {
+    "exists": true,
+    "columns": [
+      "ticket_id",
+      "message",
+      "category",
+      "priority",
+      "needs_human_review",
+      "reply_draft"
+    ],
+    "records": 12,
+    "exact_schema": true,
+    "source_ids_and_messages_preserved": true,
+    "predictions": [
+      {
+        "ticket_id": "T002",
+        "expected": {
+          "ticket_id": "T002",
+          "message": "I was charged twice for last month",
+          "category": "billing",
+          "priority": "high",
+          "needs_human_review": "True",
+          "reply_draft": "Thank you for contacting us about your billing concern. Our support team will review the details and follow up with you."
+        },
+        "actual": {
+          "ticket_id": "T002",
+          "message": "I was charged twice for last month",
+          "category": "billing",
+          "priority": "high",
+          "needs_human_review": "True",
+          "reply_draft": "Thank you for contacting us about your billing concern. Our support team will review the details and follow up with you."
+        },
+        "match": true
+      },
+      {
+        "ticket_id": "T009",
+        "expected": {
+          "ticket_id": "T009",
+          "message": "URGENT: my account is locked",
+          "category": "account",
+          "priority": "high",
+          "needs_human_review": "True",
+          "reply_draft": "Thank you for contacting us about your account. Our support team will review the details and follow up with you."
+        },
+        "actual": {
+          "ticket_id": "T009",
+          "message": "URGENT: my account is locked",
+          "category": "account",
+          "priority": "high",
+          "needs_human_review": "True",
+          "reply_draft": "Thank you for contacting us about your account. Our support team will review the details and follow up with you."
+        },
+        "match": true
+      },
+      {
+        "ticket_id": "T008",
+        "expected": {
+          "ticket_id": "T008",
+          "message": "Can you explain your pricing plans?",
+          "category": "other",
+          "priority": "normal",
+          "needs_human_review": "True",
+          "reply_draft": "Thank you for contacting support. Our team will review your message and determine the appropriate next steps."
+        },
+        "actual": {
+          "ticket_id": "T008",
+          "message": "Can you explain your pricing plans?",
+          "category": "other",
+          "priority": "normal",
+          "needs_human_review": "True",
+          "reply_draft": "Thank you for contacting support. Our team will review your message and determine the appropriate next steps."
+        },
+        "match": true
+      }
+    ]
+  },
+  "fresh_baseline_test_exit": 1,
+  "commands": [
+    {
+      "name": "Python version",
+      "exit_code": 0
+    },
+    {
+      "name": "Git version",
+      "exit_code": 0
+    },
+    {
+      "name": "Fresh baseline tests before application",
+      "exit_code": 1
+    },
+    {
+      "name": "Current application",
+      "exit_code": 0
+    },
+    {
+      "name": "Current full test suite after application",
+      "exit_code": 0
+    }
+  ],
+  "post_run_inspection": {
+    "exists": true,
+    "columns": [
+      "ticket_id",
+      "message",
+      "category",
+      "priority",
+      "needs_human_review",
+      "reply_draft"
+    ],
+    "records": 12,
+    "exact_schema": true,
+    "source_ids_and_messages_preserved": true,
+    "predictions": [
+      {
+        "ticket_id": "T002",
+        "expected": {
+          "ticket_id": "T002",
+          "message": "I was charged twice for last month",
+          "category": "billing",
+          "priority": "high",
+          "needs_human_review": "True",
+          "reply_draft": "Thank you for contacting us about your billing concern. Our support team will review the details and follow up with you."
+        },
+        "actual": {
+          "ticket_id": "T002",
+          "message": "I was charged twice for last month",
+          "category": "billing",
+          "priority": "high",
+          "needs_human_review": "True",
+          "reply_draft": "Thank you for contacting us about your billing concern. Our support team will review the details and follow up with you."
+        },
+        "match": true
+      },
+      {
+        "ticket_id": "T009",
+        "expected": {
+          "ticket_id": "T009",
+          "message": "URGENT: my account is locked",
+          "category": "account",
+          "priority": "high",
+          "needs_human_review": "True",
+          "reply_draft": "Thank you for contacting us about your account. Our support team will review the details and follow up with you."
+        },
+        "actual": {
+          "ticket_id": "T009",
+          "message": "URGENT: my account is locked",
+          "category": "account",
+          "priority": "high",
+          "needs_human_review": "True",
+          "reply_draft": "Thank you for contacting us about your account. Our support team will review the details and follow up with you."
+        },
+        "match": true
+      },
+      {
+        "ticket_id": "T008",
+        "expected": {
+          "ticket_id": "T008",
+          "message": "Can you explain your pricing plans?",
+          "category": "other",
+          "priority": "normal",
+          "needs_human_review": "True",
+          "reply_draft": "Thank you for contacting support. Our team will review your message and determine the appropriate next steps."
+        },
+        "actual": {
+          "ticket_id": "T008",
+          "message": "Can you explain your pricing plans?",
+          "category": "other",
+          "priority": "normal",
+          "needs_human_review": "True",
+          "reply_draft": "Thank you for contacting support. Our team will review your message and determine the appropriate next steps."
+        },
+        "match": true
+      }
+    ]
+  }
+}

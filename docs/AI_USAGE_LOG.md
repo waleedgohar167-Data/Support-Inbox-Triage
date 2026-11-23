@@ -68,3 +68,18 @@ The basic Git workflow is clear. The next area I want to understand more deeply 
 | Check reproducibility of the handover source. | Actual clean-copy assistant commands and outcomes are recorded in `docs/evidence/day1-handover-verification.txt`. | This does not prove the candidate's independent understanding or future ticket-classification behavior. |
 
 The candidate performed the Windows commands and local Git operations shown in the supplied terminal output. The personal-review fields above still need the candidate's own record; this final update does not mark them complete automatically.
+
+
+## Day 5 — 23 November 2026 — Baseline audit assistance
+
+| Assistance | Evidence | Candidate verification / remaining step |
+| --- | --- | --- |
+| Read the Day 5 assignment and inspect the pushed Day 4 code, tests, requirements, and repository history. | Exact baseline `71878b5`; paths and observations in `docs/day5/BLOCK_A_AUDIT.md`. | Candidate supplied local Git status and README diff. Technical understanding and findings review are still to be confirmed. |
+| Inspect existing assertions and execute the unchanged baseline in an isolated Linux checkout. | Actual terminal transcript: fresh run has one failure and one error; after generating output, all 25 tests pass. | These are assistant-environment results. Run the local verification helper and review the corresponding Windows evidence separately. |
+| Record three predictions before execution and compare generated CSV values with them. | Prediction and output-inspection JSON files under `docs/day5/evidence/`. | Assistant-prepared predictions; do not claim they were independently authored by the candidate. Review the reasoning and practice predicting another ticket before executing it. |
+| Draft the risk assessment and prepare the documentation update. | Confirmed findings are labeled separately from potential failures and policy ambiguity. | No runtime fix, supervisor sign-off, PR, or candidate review is claimed by this preparation. |
+
+Later blocks must record the actual advice accepted or rejected, the candidate's reason, and the observed verification. Those decisions are not prefilled here.
+
+### Windows verification update - 23 November 2026
+Executed using Python 3.13.5 and Git 2.47.1.windows.1. Fresh baseline: 25 tests executed, 23 passed, 1 failure, 1 error. After application execution: all 25 passed. CSV verification confirmed the exact six-column schema, 12 records, preserved IDs/messages, and 3/3 prediction matches. Evidence: docs/day5/evidence/block-a-local-terminal-20261123-151340-018369.txt and block-a-local-inspection-20261123-151340-018369.json. This supersedes the earlier pending local-execution status; personal review and checkpoint submission remain separate.
