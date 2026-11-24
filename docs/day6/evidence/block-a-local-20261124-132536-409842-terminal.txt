@@ -1,0 +1,264 @@
+Day 6 Block A - actual execution on the machine running this script
+
+Started: 2026-11-24T13:25:36.409842+05:00
+
+Working directory: E:\Support Inbox Triage
+
+$ "C:\Users\MR. BRUTAL\AppData\Local\Programs\Python\Python313\python.exe" --version
+Python 3.13.5
+Exit code: 0
+
+$ git --version
+git version 2.47.1.windows.1
+Exit code: 0
+
+$ git status --short --branch
+## feature/day5-reliability...origin/feature/day5-reliability
+Exit code: 0
+
+$ git rev-parse HEAD
+dcb80c0fcea63661ccfe71ecdaa5ac721eb2ac84
+Exit code: 0
+
+$ git branch --show-current
+feature/day5-reliability
+Exit code: 0
+
+$ git diff --name-only HEAD
+
+Exit code: 0
+
+$ git ls-files --others --exclude-standard
+
+Exit code: 0
+
+$ git fetch origin --prune
+
+Exit code: 0
+
+$ git rev-parse origin/feature/day5-reliability
+dcb80c0fcea63661ccfe71ecdaa5ac721eb2ac84
+Exit code: 0
+
+$ git log --oneline --decorate -10
+dcb80c0 (HEAD -> feature/day5-reliability, origin/feature/day5-reliability) docs: prepare day 5 final handover
+08ce1cd docs: document day 5 clean-run reproducibility
+7c191b3 docs: document day 5 failure investigation
+f7987e2 test: add day 5 adversarial boundary coverage
+7b25302 feat: harden day 5 input validation
+783992a docs: record Day 5 baseline audit and Windows verification
+71878b5 (origin/feature/day1-block4-readme, feature/day1-block4-readme) feat: complete day 4 ticket triage pipeline
+18e3d4b test: add day 3 reader verification
+0368578 feat: add day 3 ticket csv reader
+992c314 docs: add day 2 block e delivery package
+Exit code: 0
+
+$ git rev-parse origin/main
+ca806068c241bd573680a7d4c4aaf55defd7254d
+Exit code: 0
+
+$ git merge-base --is-ancestor origin/main HEAD
+
+Exit code: 0
+
+$ git rev-list --count origin/main..HEAD
+18
+Exit code: 0
+
+$ git rev-list --count origin/feature/day1-block4-readme..HEAD
+6
+Exit code: 0
+
+$ git diff --stat origin/main...HEAD
+ BLOCK_B_README.txt                                 |  44 ++++
+ BLOCK_C_README.txt                                 |  54 ++++
+ BLOCK_E_README.txt                                 |  13 +
+ README.md                                          |  82 ++++--
+ README_FIRST.md                                    |  23 ++
+ SUPPORT_BLOCK1_READ_FIRST.md                       |  37 +++
+ block6-update/START_HERE.md                        |  90 +++++++
+ block6-update/block6.patch                         | 227 +++++++++++++++++
+ category.py                                        |  19 ++
+ docs/AI_USAGE_LOG.md                               | 103 +++++++-
+ docs/BLOCK6_REVIEW.md                              |  76 ++++++
+ docs/DAY1_FINAL_REPORT.md                          |  88 +++++++
+ docs/REQUIREMENTS.md                               | 268 ++++++++++++++++++-
+ docs/WORKLOG.md                                    | 146 +++++------
+ docs/day2/ADVERSARIAL_CASES.csv                    |   7 +
+ docs/day2/BLOCK_B_EVIDENCE_NOTES.md                |  27 ++
+ docs/day2/BLOCK_C_EVIDENCE_NOTES.md                |  36 +++
+ docs/day2/BLOCK_D_DELIVERY_NOTES.md                |  21 ++
+ docs/day2/DECISION_LOG.md                          | 106 ++++++++
+ docs/day2/DELIVERY_PLAN.md                         |  80 ++++++
+ docs/day2/EDGE_CASES_AND_RISKS.md                  | 109 ++++++++
+ docs/day2/EXPECTED_OUTPUTS.csv                     |  13 +
+ docs/day2/issues/ISSUE-01-csv-input-errors.md      |  63 +++++
+ .../day2/issues/ISSUE-02-triage-rules-templates.md |  90 +++++++
+ docs/day2/issues/ISSUE-03-export-tests.md          |  69 +++++
+ docs/day3/BLOCK_C_SCOPE_NOTE.md                    |  30 +++
+ docs/day3/BLOCK_D_EVIDENCE_STATUS.md               |  11 +
+ docs/day3/BLOCK_D_SCOPE_NOTE.md                    |  42 +++
+ docs/day3/BLOCK_E_SCOPE_NOTE.md                    |  34 +++
+ docs/day3/csv_learning_sample.csv                  |   3 +
+ docs/day5/BLOCK_A_AUDIT.md                         | 109 ++++++++
+ docs/day5/BLOCK_C_EVIDENCE.md                      |  40 +++
+ docs/day5/BLOCK_C_REGRESSION.txt                   | Bin 0 -> 13742 bytes
+ docs/day5/BLOCK_D_EVIDENCE.md                      |  74 ++++++
+ docs/day5/BLOCK_D_REGRESSION.txt                   | Bin 0 -> 14048 bytes
+ docs/day5/BLOCK_E_REPRODUCIBILITY.md               |  74 ++++++
+ docs/day5/BLOCK_F_HANDOVER.md                      |  44 ++++
+ docs/day5/evidence/block-a-assistant-terminal.txt  | 106 ++++++++
+ ...-a-local-inspection-20261123-151340-018369.json | 182 +++++++++++++
+ ...ock-a-local-terminal-20261123-151340-018369.txt | 112 ++++++++
+ docs/day5/evidence/block-a-output-inspection.json  |  81 ++++++
+ ...ock-a-pre-run-output-20261123-151340-018369.csv |  13 +
+ .../block-a-predictions-before-execution.json      |  33 +++
+ docs/evidence/block6-assistant-verification.txt    |  48 ++++
+ docs/evidence/day1-handover-verification.txt       |  44 ++++
+ docs/evidence/day1-windows-verification.txt        |  27 ++
+ exporter.py                                        |  25 ++
+ final-update/START_HERE.md                         |  79 ++++++
+ final-update/SUBMISSION_EMAIL.md                   |  18 ++
+ final-update/final.patch                           | 283 +++++++++++++++++++++
+ main.py                                            |  99 ++++++-
+ priority.py                                        |  22 ++
+ review.py                                          |  65 +++++
+ tests/test_day4_verification.py                    |  91 +++++++
+ tests/test_day5_adversarial.py                     | 127 +++++++++
+ tests/test_day5_block_d_diagnostic.py              |  44 ++++
+ tests/test_day5_negative_inputs.py                 |  97 +++++++
+ tests/test_export.py                               |  49 ++++
+ tests/test_priority.py                             |  38 +++
+ tests/test_reader.py                               |  27 ++
+ tests/test_review.py                               |  71 ++++++
+ 61 files changed, 4022 insertions(+), 111 deletions(-)
+Exit code: 0
+
+$ "C:\Users\MR. BRUTAL\AppData\Local\Programs\Python\Python313\python.exe" main.py
+Loaded 12 tickets
+Exported 12 triaged tickets to output/triaged.csv
+Exit code: 0
+
+$ "C:\Users\MR. BRUTAL\AppData\Local\Programs\Python\Python313\python.exe" -m unittest tests.test_day4_verification tests.test_day5_adversarial tests.test_day5_negative_inputs tests.test_export tests.test_priority tests.test_reader tests.test_review tests.test_smoke -v
+test_all_12_expected_classifications (tests.test_day4_verification.TestDay4Verification.test_all_12_expected_classifications) ... ok
+test_output_csv_contains_all_expected_ids (tests.test_day4_verification.TestDay4Verification.test_output_csv_contains_all_expected_ids) ... ok
+test_output_csv_matches_required_schema_and_count (tests.test_day4_verification.TestDay4Verification.test_output_csv_matches_required_schema_and_count) ... ok
+test_reply_drafts_are_category_specific_and_non_action_claiming (tests.test_day4_verification.TestDay4Verification.test_reply_drafts_are_category_specific_and_non_action_claiming) ... ok
+test_c01_multiple_keywords_follow_category_precedence (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c01_multiple_keywords_follow_category_precedence) ... ok
+test_c02_high_priority_non_billing_category (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c02_high_priority_non_billing_category) ... ok
+test_c03_unknown_category_requires_human_review (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c03_unknown_category_requires_human_review) ... ok
+test_c04_keyword_matching_is_case_insensitive (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c04_keyword_matching_is_case_insensitive) ... ok
+test_c05_csv_preserves_commas_quotes_and_embedded_newlines (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c05_csv_preserves_commas_quotes_and_embedded_newlines) ... ok
+test_c06_repeated_execution_overwrites_without_duplicate_rows (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c06_repeated_execution_overwrites_without_duplicate_rows) ... ok
+test_c07_reply_draft_avoids_unauthorized_commitments (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c07_reply_draft_avoids_unauthorized_commitments) ... ok
+test_blank_ticket_id_is_skipped_with_warning (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_blank_ticket_id_is_skipped_with_warning) ... ok
+test_empty_and_whitespace_messages_are_skipped_with_warning (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_empty_and_whitespace_messages_are_skipped_with_warning) ... ok
+test_headers_only_file_returns_no_records (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_headers_only_file_returns_no_records) ... ok
+test_missing_file_has_controlled_error (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_missing_file_has_controlled_error) ... ok
+test_missing_message_value_is_skipped_and_valid_row_preserved (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_missing_message_value_is_skipped_and_valid_row_preserved) ... ok
+test_missing_required_column_has_clear_error (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_missing_required_column_has_clear_error) ... ok
+test_utf8_bom_header_is_supported (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_utf8_bom_header_is_supported) ... ok
+test_exports_exact_schema_and_all_tickets (tests.test_export.TestExportTriagedTickets.test_exports_exact_schema_and_all_tickets) ... ok
+test_rerun_overwrites_instead_of_appending (tests.test_export.TestExportTriagedTickets.test_rerun_overwrites_instead_of_appending) ... ok
+test_each_approved_trigger_is_high (tests.test_priority.TestAssignPriority.test_each_approved_trigger_is_high) ... ok
+test_empty_message_is_normal (tests.test_priority.TestAssignPriority.test_empty_message_is_normal) ... ok
+test_matching_is_case_insensitive (tests.test_priority.TestAssignPriority.test_matching_is_case_insensitive) ... ok
+test_non_matching_message_is_normal (tests.test_priority.TestAssignPriority.test_non_matching_message_is_normal) ... ok
+test_non_string_message_raises_type_error (tests.test_priority.TestAssignPriority.test_non_string_message_raises_type_error) ... ok
+test_preserves_first_ticket_values (tests.test_reader.TestReadTickets.test_preserves_first_ticket_values) ... ok
+test_preserves_required_fields (tests.test_reader.TestReadTickets.test_preserves_required_fields) ... ok
+test_reads_12_source_tickets (tests.test_reader.TestReadTickets.test_reads_12_source_tickets) ... ok
+test_category_and_priority_are_case_insensitive (tests.test_review.TestNeedsHumanReview.test_category_and_priority_are_case_insensitive) ... ok
+test_high_priority_requires_review (tests.test_review.TestNeedsHumanReview.test_high_priority_requires_review) ... ok
+test_other_category_requires_review_even_when_normal (tests.test_review.TestNeedsHumanReview.test_other_category_requires_review_even_when_normal) ... ok
+test_rejects_unknown_category (tests.test_review.TestNeedsHumanReview.test_rejects_unknown_category) ... ok
+test_rejects_unknown_priority (tests.test_review.TestNeedsHumanReview.test_rejects_unknown_priority) ... ok
+test_supported_normal_category_does_not_require_review (tests.test_review.TestNeedsHumanReview.test_supported_normal_category_does_not_require_review) ... ok
+test_adds_review_flag_and_reply_draft (tests.test_review.TestProcessTicket.test_adds_review_flag_and_reply_draft) ... ok
+test_drafts_do_not_claim_actions_or_send_messages (tests.test_review.TestProcessTicket.test_drafts_do_not_claim_actions_or_send_messages) ... ok
+test_missing_required_field_is_rejected (tests.test_review.TestProcessTicket.test_missing_required_field_is_rejected) ... ok
+test_provides_four_category_specific_fixed_drafts (tests.test_review.TestProcessTicket.test_provides_four_category_specific_fixed_drafts) ... ok
+test_python_runs (tests.test_smoke.StarterSmokeTest.test_python_runs) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 0.084s
+
+OK
+C01 | expected='billing' | actual='billing' | PASS
+C02 | expected={'category': 'account', 'priority': 'high', 'needs_human_review': True} | actual={'category': 'account', 'priority': 'high', 'needs_human_review': True} | PASS
+C03 | expected={'category': 'other', 'needs_human_review': True} | actual={'category': 'other', 'needs_human_review': True} | PASS
+C04 | expected={'category': 'billing', 'priority': 'normal'} | actual={'category': 'billing', 'priority': 'normal'} | PASS
+C05 | expected=[{'ticket_id': 'C05', 'message': 'Payment failed, "please help" with this issue.\nSecond line contains more detail.'}] | actual=[{'ticket_id': 'C05', 'message': 'Payment failed, "please help" with this issue.\nSecond line contains more detail.'}] | PASS
+C06 | expected=(2, 2) | actual=(2, 2) | PASS
+C07 | expected={'billing': False, 'account': False, 'technical': False, 'other': False} | actual={'billing': False, 'account': False, 'technical': False, 'other': False} | PASS
+WARNING: Skipping row 2: missing message value
+Exit code: 0
+
+$ "C:\Users\MR. BRUTAL\AppData\Local\Programs\Python\Python313\python.exe" -m unittest discover -s tests -v
+test_all_12_expected_classifications (test_day4_verification.TestDay4Verification.test_all_12_expected_classifications) ... ok
+test_output_csv_contains_all_expected_ids (test_day4_verification.TestDay4Verification.test_output_csv_contains_all_expected_ids) ... ok
+test_output_csv_matches_required_schema_and_count (test_day4_verification.TestDay4Verification.test_output_csv_matches_required_schema_and_count) ... ok
+test_reply_drafts_are_category_specific_and_non_action_claiming (test_day4_verification.TestDay4Verification.test_reply_drafts_are_category_specific_and_non_action_claiming) ... ok
+test_c01_multiple_keywords_follow_category_precedence (test_day5_adversarial.TestDay5AdversarialBoundaries.test_c01_multiple_keywords_follow_category_precedence) ... ok
+test_c02_high_priority_non_billing_category (test_day5_adversarial.TestDay5AdversarialBoundaries.test_c02_high_priority_non_billing_category) ... ok
+test_c03_unknown_category_requires_human_review (test_day5_adversarial.TestDay5AdversarialBoundaries.test_c03_unknown_category_requires_human_review) ... ok
+test_c04_keyword_matching_is_case_insensitive (test_day5_adversarial.TestDay5AdversarialBoundaries.test_c04_keyword_matching_is_case_insensitive) ... ok
+test_c05_csv_preserves_commas_quotes_and_embedded_newlines (test_day5_adversarial.TestDay5AdversarialBoundaries.test_c05_csv_preserves_commas_quotes_and_embedded_newlines) ... ok
+test_c06_repeated_execution_overwrites_without_duplicate_rows (test_day5_adversarial.TestDay5AdversarialBoundaries.test_c06_repeated_execution_overwrites_without_duplicate_rows) ... ok
+test_c07_reply_draft_avoids_unauthorized_commitments (test_day5_adversarial.TestDay5AdversarialBoundaries.test_c07_reply_draft_avoids_unauthorized_commitments) ... ok
+test_duplicate_ticket_ids_should_be_rejected_exercise (test_day5_block_d_diagnostic.TestDay5BlockDDiagnostic.test_duplicate_ticket_ids_should_be_rejected_exercise) ... FAIL
+test_blank_ticket_id_is_skipped_with_warning (test_day5_negative_inputs.TestNegativeInputHandling.test_blank_ticket_id_is_skipped_with_warning) ... ok
+test_empty_and_whitespace_messages_are_skipped_with_warning (test_day5_negative_inputs.TestNegativeInputHandling.test_empty_and_whitespace_messages_are_skipped_with_warning) ... ok
+test_headers_only_file_returns_no_records (test_day5_negative_inputs.TestNegativeInputHandling.test_headers_only_file_returns_no_records) ... ok
+test_missing_file_has_controlled_error (test_day5_negative_inputs.TestNegativeInputHandling.test_missing_file_has_controlled_error) ... ok
+test_missing_message_value_is_skipped_and_valid_row_preserved (test_day5_negative_inputs.TestNegativeInputHandling.test_missing_message_value_is_skipped_and_valid_row_preserved) ... ok
+test_missing_required_column_has_clear_error (test_day5_negative_inputs.TestNegativeInputHandling.test_missing_required_column_has_clear_error) ... ok
+test_utf8_bom_header_is_supported (test_day5_negative_inputs.TestNegativeInputHandling.test_utf8_bom_header_is_supported) ... ok
+test_exports_exact_schema_and_all_tickets (test_export.TestExportTriagedTickets.test_exports_exact_schema_and_all_tickets) ... ok
+test_rerun_overwrites_instead_of_appending (test_export.TestExportTriagedTickets.test_rerun_overwrites_instead_of_appending) ... ok
+test_each_approved_trigger_is_high (test_priority.TestAssignPriority.test_each_approved_trigger_is_high) ... ok
+test_empty_message_is_normal (test_priority.TestAssignPriority.test_empty_message_is_normal) ... ok
+test_matching_is_case_insensitive (test_priority.TestAssignPriority.test_matching_is_case_insensitive) ... ok
+test_non_matching_message_is_normal (test_priority.TestAssignPriority.test_non_matching_message_is_normal) ... ok
+test_non_string_message_raises_type_error (test_priority.TestAssignPriority.test_non_string_message_raises_type_error) ... ok
+test_preserves_first_ticket_values (test_reader.TestReadTickets.test_preserves_first_ticket_values) ... ok
+test_preserves_required_fields (test_reader.TestReadTickets.test_preserves_required_fields) ... ok
+test_reads_12_source_tickets (test_reader.TestReadTickets.test_reads_12_source_tickets) ... ok
+test_category_and_priority_are_case_insensitive (test_review.TestNeedsHumanReview.test_category_and_priority_are_case_insensitive) ... ok
+test_high_priority_requires_review (test_review.TestNeedsHumanReview.test_high_priority_requires_review) ... ok
+test_other_category_requires_review_even_when_normal (test_review.TestNeedsHumanReview.test_other_category_requires_review_even_when_normal) ... ok
+test_rejects_unknown_category (test_review.TestNeedsHumanReview.test_rejects_unknown_category) ... ok
+test_rejects_unknown_priority (test_review.TestNeedsHumanReview.test_rejects_unknown_priority) ... ok
+test_supported_normal_category_does_not_require_review (test_review.TestNeedsHumanReview.test_supported_normal_category_does_not_require_review) ... ok
+test_adds_review_flag_and_reply_draft (test_review.TestProcessTicket.test_adds_review_flag_and_reply_draft) ... ok
+test_drafts_do_not_claim_actions_or_send_messages (test_review.TestProcessTicket.test_drafts_do_not_claim_actions_or_send_messages) ... ok
+test_missing_required_field_is_rejected (test_review.TestProcessTicket.test_missing_required_field_is_rejected) ... ok
+test_provides_four_category_specific_fixed_drafts (test_review.TestProcessTicket.test_provides_four_category_specific_fixed_drafts) ... ok
+test_python_runs (test_smoke.StarterSmokeTest.test_python_runs) ... ok
+
+======================================================================
+FAIL: test_duplicate_ticket_ids_should_be_rejected_exercise (test_day5_block_d_diagnostic.TestDay5BlockDDiagnostic.test_duplicate_ticket_ids_should_be_rejected_exercise)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "E:\Support Inbox Triage\tests\test_day5_block_d_diagnostic.py", line 39, in test_duplicate_ticket_ids_should_be_rejected_exercise
+    with self.assertRaises(ValueError):
+         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 40 tests in 0.094s
+
+FAILED (failures=1)
+C01 | expected='billing' | actual='billing' | PASS
+C02 | expected={'category': 'account', 'priority': 'high', 'needs_human_review': True} | actual={'category': 'account', 'priority': 'high', 'needs_human_review': True} | PASS
+C03 | expected={'category': 'other', 'needs_human_review': True} | actual={'category': 'other', 'needs_human_review': True} | PASS
+C04 | expected={'category': 'billing', 'priority': 'normal'} | actual={'category': 'billing', 'priority': 'normal'} | PASS
+C05 | expected=[{'ticket_id': 'C05', 'message': 'Payment failed, "please help" with this issue.\nSecond line contains more detail.'}] | actual=[{'ticket_id': 'C05', 'message': 'Payment failed, "please help" with this issue.\nSecond line contains more detail.'}] | PASS
+C06 | expected=(2, 2) | actual=(2, 2) | PASS
+C07 | expected={'billing': False, 'account': False, 'technical': False, 'other': False} | actual={'billing': False, 'account': False, 'technical': False, 'other': False} | PASS
+WARNING: Skipping row 2: missing message value
+Exit code: 1
+
+$ git diff --check
+
+Exit code: 0

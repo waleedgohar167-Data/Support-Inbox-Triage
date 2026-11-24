@@ -68,3 +68,8 @@ Next: review the final diff, commit and push the Block E changes, then proceed t
 - Final regression rerun, diff review, and Git verification remain pending.
 
 Evidence: docs/day5/BLOCK_F_HANDOVER.md.
+
+
+## Day 6 Block A verification - 2026-11-24T13:25:43.963494+05:00
+
+Executed the supplied evidence collector; actual commands and outcomes are linked in docs/day6/BLOCK_A_BASELINE.md. PR completion, review and checkpoint submission remain separately tracked.
