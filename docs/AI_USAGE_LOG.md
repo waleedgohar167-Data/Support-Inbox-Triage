@@ -114,3 +114,11 @@ AI inspected the assignment and pushed baseline, prepared a local evidence colle
 ## Day 6 Block B - 2026-11-24T14:16:53.426966+05:00
 
 AI prepared the isolated test-integrity harness. It used a committed-source temporary copy, recorded real output, restored the intentional mutation and checked working-source hashes. Candidate trace and judgment are not generated or certified by the harness.
+
+## Day 6 Block F - 24 November 2026
+
+AI assistance: Organized the final handover, summarized the supplied Block A-E evidence, and prepared the final verification and documentation structure.
+
+Candidate verification: Executed the application and the 39-test production regression suite, inspected the CSV row count, schema, ticket IDs, and SHA256 hashes, and supplied the actual terminal results.
+
+Ownership boundary: The recorded terminal output supports the stated local verification. It does not establish mentor approval, colleague reproduction, or GitHub reviewer approval. Block D and Block E limitations remain disclosed.
