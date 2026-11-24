@@ -1,0 +1,106 @@
+Day 5 Block A — assistant baseline execution
+Source commit: 71878b5e33c246fdbf6b2b7d68b008f8f82e2281
+Environment: assistant Linux; candidate Windows verification is separate.
+Prediction file was written before test/application execution.
+Generated output existed before tests: False
+
+RUN: python_version
+COMMAND: python --version
+Python 3.12.14
+EXIT CODE: 0
+
+RUN: git_head
+COMMAND: git rev-parse HEAD
+71878b5e33c246fdbf6b2b7d68b008f8f82e2281
+EXIT CODE: 0
+
+RUN: tests_before_application
+COMMAND: python -m unittest discover -s tests -v
+test_all_12_expected_classifications (test_day4_verification.TestDay4Verification.test_all_12_expected_classifications) ... ok
+test_output_csv_contains_all_expected_ids (test_day4_verification.TestDay4Verification.test_output_csv_contains_all_expected_ids) ... ERROR
+test_output_csv_matches_required_schema_and_count (test_day4_verification.TestDay4Verification.test_output_csv_matches_required_schema_and_count) ... FAIL
+test_reply_drafts_are_category_specific_and_non_action_claiming (test_day4_verification.TestDay4Verification.test_reply_drafts_are_category_specific_and_non_action_claiming) ... ok
+test_exports_exact_schema_and_all_tickets (test_export.TestExportTriagedTickets.test_exports_exact_schema_and_all_tickets) ... ok
+test_rerun_overwrites_instead_of_appending (test_export.TestExportTriagedTickets.test_rerun_overwrites_instead_of_appending) ... ok
+test_each_approved_trigger_is_high (test_priority.TestAssignPriority.test_each_approved_trigger_is_high) ... ok
+test_empty_message_is_normal (test_priority.TestAssignPriority.test_empty_message_is_normal) ... ok
+test_matching_is_case_insensitive (test_priority.TestAssignPriority.test_matching_is_case_insensitive) ... ok
+test_non_matching_message_is_normal (test_priority.TestAssignPriority.test_non_matching_message_is_normal) ... ok
+test_non_string_message_raises_type_error (test_priority.TestAssignPriority.test_non_string_message_raises_type_error) ... ok
+test_preserves_first_ticket_values (test_reader.TestReadTickets.test_preserves_first_ticket_values) ... ok
+test_preserves_required_fields (test_reader.TestReadTickets.test_preserves_required_fields) ... ok
+test_reads_12_source_tickets (test_reader.TestReadTickets.test_reads_12_source_tickets) ... ok
+test_category_and_priority_are_case_insensitive (test_review.TestNeedsHumanReview.test_category_and_priority_are_case_insensitive) ... ok
+test_high_priority_requires_review (test_review.TestNeedsHumanReview.test_high_priority_requires_review) ... ok
+test_other_category_requires_review_even_when_normal (test_review.TestNeedsHumanReview.test_other_category_requires_review_even_when_normal) ... ok
+test_rejects_unknown_category (test_review.TestNeedsHumanReview.test_rejects_unknown_category) ... ok
+test_rejects_unknown_priority (test_review.TestNeedsHumanReview.test_rejects_unknown_priority) ... ok
+test_supported_normal_category_does_not_require_review (test_review.TestNeedsHumanReview.test_supported_normal_category_does_not_require_review) ... ok
+test_adds_review_flag_and_reply_draft (test_review.TestProcessTicket.test_adds_review_flag_and_reply_draft) ... ok
+test_drafts_do_not_claim_actions_or_send_messages (test_review.TestProcessTicket.test_drafts_do_not_claim_actions_or_send_messages) ... ok
+test_missing_required_field_is_rejected (test_review.TestProcessTicket.test_missing_required_field_is_rejected) ... ok
+test_provides_four_category_specific_fixed_drafts (test_review.TestProcessTicket.test_provides_four_category_specific_fixed_drafts) ... ok
+test_python_runs (test_smoke.StarterSmokeTest.test_python_runs) ... ok
+
+======================================================================
+ERROR: test_output_csv_contains_all_expected_ids (test_day4_verification.TestDay4Verification.test_output_csv_contains_all_expected_ids)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3d8e4d0651a5/support-inbox-triage-day5/tests/test_day4_verification.py", line 61, in test_output_csv_contains_all_expected_ids
+    with open("output/triaged.csv", "r", encoding="utf-8", newline="") as csv_file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'output/triaged.csv'
+
+======================================================================
+FAIL: test_output_csv_matches_required_schema_and_count (test_day4_verification.TestDay4Verification.test_output_csv_matches_required_schema_and_count)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/3d8e4d0651a5/support-inbox-triage-day5/tests/test_day4_verification.py", line 51, in test_output_csv_matches_required_schema_and_count
+    self.assertTrue(output_path.exists())
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.006s
+
+FAILED (failures=1, errors=1)
+EXIT CODE: 1
+
+RUN: application
+COMMAND: python main.py
+Loaded 12 tickets
+Exported 12 triaged tickets to output/triaged.csv
+EXIT CODE: 0
+
+RUN: tests_after_application
+COMMAND: python -m unittest discover -s tests -v
+test_all_12_expected_classifications (test_day4_verification.TestDay4Verification.test_all_12_expected_classifications) ... ok
+test_output_csv_contains_all_expected_ids (test_day4_verification.TestDay4Verification.test_output_csv_contains_all_expected_ids) ... ok
+test_output_csv_matches_required_schema_and_count (test_day4_verification.TestDay4Verification.test_output_csv_matches_required_schema_and_count) ... ok
+test_reply_drafts_are_category_specific_and_non_action_claiming (test_day4_verification.TestDay4Verification.test_reply_drafts_are_category_specific_and_non_action_claiming) ... ok
+test_exports_exact_schema_and_all_tickets (test_export.TestExportTriagedTickets.test_exports_exact_schema_and_all_tickets) ... ok
+test_rerun_overwrites_instead_of_appending (test_export.TestExportTriagedTickets.test_rerun_overwrites_instead_of_appending) ... ok
+test_each_approved_trigger_is_high (test_priority.TestAssignPriority.test_each_approved_trigger_is_high) ... ok
+test_empty_message_is_normal (test_priority.TestAssignPriority.test_empty_message_is_normal) ... ok
+test_matching_is_case_insensitive (test_priority.TestAssignPriority.test_matching_is_case_insensitive) ... ok
+test_non_matching_message_is_normal (test_priority.TestAssignPriority.test_non_matching_message_is_normal) ... ok
+test_non_string_message_raises_type_error (test_priority.TestAssignPriority.test_non_string_message_raises_type_error) ... ok
+test_preserves_first_ticket_values (test_reader.TestReadTickets.test_preserves_first_ticket_values) ... ok
+test_preserves_required_fields (test_reader.TestReadTickets.test_preserves_required_fields) ... ok
+test_reads_12_source_tickets (test_reader.TestReadTickets.test_reads_12_source_tickets) ... ok
+test_category_and_priority_are_case_insensitive (test_review.TestNeedsHumanReview.test_category_and_priority_are_case_insensitive) ... ok
+test_high_priority_requires_review (test_review.TestNeedsHumanReview.test_high_priority_requires_review) ... ok
+test_other_category_requires_review_even_when_normal (test_review.TestNeedsHumanReview.test_other_category_requires_review_even_when_normal) ... ok
+test_rejects_unknown_category (test_review.TestNeedsHumanReview.test_rejects_unknown_category) ... ok
+test_rejects_unknown_priority (test_review.TestNeedsHumanReview.test_rejects_unknown_priority) ... ok
+test_supported_normal_category_does_not_require_review (test_review.TestNeedsHumanReview.test_supported_normal_category_does_not_require_review) ... ok
+test_adds_review_flag_and_reply_draft (test_review.TestProcessTicket.test_adds_review_flag_and_reply_draft) ... ok
+test_drafts_do_not_claim_actions_or_send_messages (test_review.TestProcessTicket.test_drafts_do_not_claim_actions_or_send_messages) ... ok
+test_missing_required_field_is_rejected (test_review.TestProcessTicket.test_missing_required_field_is_rejected) ... ok
+test_provides_four_category_specific_fixed_drafts (test_review.TestProcessTicket.test_provides_four_category_specific_fixed_drafts) ... ok
+test_python_runs (test_smoke.StarterSmokeTest.test_python_runs) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 0.006s
+
+OK
+EXIT CODE: 0

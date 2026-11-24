@@ -1,0 +1,13 @@
+ticket_id,message,category,priority,needs_human_review,reply_draft
+T001,I cannot log in to my account,account,normal,False,Thank you for contacting us about your account. Our support team will review the details and follow up with you.
+T002,I was charged twice for last month,billing,high,True,Thank you for contacting us about your billing concern. Our support team will review the details and follow up with you.
+T003,Please send my invoice,billing,normal,False,Thank you for contacting us about your billing concern. Our support team will review the details and follow up with you.
+T004,The app crashes when uploading a file,technical,normal,False,Thank you for reporting this technical issue. Our support team will review the details and follow up with you.
+T005,How do I reset my password?,account,normal,False,Thank you for contacting us about your account. Our support team will review the details and follow up with you.
+T006,I want to request a refund,billing,normal,False,Thank you for contacting us about your billing concern. Our support team will review the details and follow up with you.
+T007,The page shows an error when I open it,technical,normal,False,Thank you for reporting this technical issue. Our support team will review the details and follow up with you.
+T008,Can you explain your pricing plans?,other,normal,True,Thank you for contacting support. Our team will review your message and determine the appropriate next steps.
+T009,URGENT: my account is locked,account,high,True,Thank you for contacting us about your account. Our support team will review the details and follow up with you.
+T010,My payment confirmation is missing,billing,normal,False,Thank you for contacting us about your billing concern. Our support team will review the details and follow up with you.
+T011,I found a bug in the dashboard,technical,normal,False,Thank you for reporting this technical issue. Our support team will review the details and follow up with you.
+T012,Do you offer training for my staff?,other,normal,True,Thank you for contacting support. Our team will review your message and determine the appropriate next steps.

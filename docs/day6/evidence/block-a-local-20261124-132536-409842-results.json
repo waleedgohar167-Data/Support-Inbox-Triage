@@ -1,0 +1,281 @@
+{
+  "started_at_pkt": "2026-11-24T13:25:36.409842+05:00",
+  "environment": "Windows-10-10.0.19045-SP0",
+  "python_executable": "C:\\Users\\MR. BRUTAL\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+  "expected_baseline": "dcb80c0fcea63661ccfe71ecdaa5ac721eb2ac84",
+  "commands": [
+    {
+      "label": "Python version",
+      "command": [
+        "C:\\Users\\MR. BRUTAL\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "Python 3.13.5\n"
+    },
+    {
+      "label": "Git version",
+      "command": [
+        "git",
+        "--version"
+      ],
+      "exit_code": 0,
+      "output": "git version 2.47.1.windows.1\n"
+    },
+    {
+      "label": "Initial working tree",
+      "command": [
+        "git",
+        "status",
+        "--short",
+        "--branch"
+      ],
+      "exit_code": 0,
+      "output": "## feature/day5-reliability...origin/feature/day5-reliability\n"
+    },
+    {
+      "label": "Local commit",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "output": "dcb80c0fcea63661ccfe71ecdaa5ac721eb2ac84\n"
+    },
+    {
+      "label": "Current branch",
+      "command": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "output": "feature/day5-reliability\n"
+    },
+    {
+      "label": "Tracked changes",
+      "command": [
+        "git",
+        "diff",
+        "--name-only",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "label": "Untracked files",
+      "command": [
+        "git",
+        "ls-files",
+        "--others",
+        "--exclude-standard"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "label": "Fetch remote references",
+      "command": [
+        "git",
+        "fetch",
+        "origin",
+        "--prune"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "label": "Remote branch commit",
+      "command": [
+        "git",
+        "rev-parse",
+        "origin/feature/day5-reliability"
+      ],
+      "exit_code": 0,
+      "output": "dcb80c0fcea63661ccfe71ecdaa5ac721eb2ac84\n"
+    },
+    {
+      "label": "Branch history",
+      "command": [
+        "git",
+        "log",
+        "--oneline",
+        "--decorate",
+        "-10"
+      ],
+      "exit_code": 0,
+      "output": "dcb80c0 (HEAD -> feature/day5-reliability, origin/feature/day5-reliability) docs: prepare day 5 final handover\n08ce1cd docs: document day 5 clean-run reproducibility\n7c191b3 docs: document day 5 failure investigation\nf7987e2 test: add day 5 adversarial boundary coverage\n7b25302 feat: harden day 5 input validation\n783992a docs: record Day 5 baseline audit and Windows verification\n71878b5 (origin/feature/day1-block4-readme, feature/day1-block4-readme) feat: complete day 4 ticket triage pipeline\n18e3d4b test: add day 3 reader verification\n0368578 feat: add day 3 ticket csv reader\n992c314 docs: add day 2 block e delivery package\n"
+    },
+    {
+      "label": "Proposed base",
+      "command": [
+        "git",
+        "rev-parse",
+        "origin/main"
+      ],
+      "exit_code": 0,
+      "output": "ca806068c241bd573680a7d4c4aaf55defd7254d\n"
+    },
+    {
+      "label": "Base ancestry",
+      "command": [
+        "git",
+        "merge-base",
+        "--is-ancestor",
+        "origin/main",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "output": ""
+    },
+    {
+      "label": "Cumulative PR commit count",
+      "command": [
+        "git",
+        "rev-list",
+        "--count",
+        "origin/main..HEAD"
+      ],
+      "exit_code": 0,
+      "output": "18\n"
+    },
+    {
+      "label": "Day 5 only commit count",
+      "command": [
+        "git",
+        "rev-list",
+        "--count",
+        "origin/feature/day1-block4-readme..HEAD"
+      ],
+      "exit_code": 0,
+      "output": "6\n"
+    },
+    {
+      "label": "Cumulative PR change summary",
+      "command": [
+        "git",
+        "diff",
+        "--stat",
+        "origin/main...HEAD"
+      ],
+      "exit_code": 0,
+      "output": " BLOCK_B_README.txt                                 |  44 ++++\n BLOCK_C_README.txt                                 |  54 ++++\n BLOCK_E_README.txt                                 |  13 +\n README.md                                          |  82 ++++--\n README_FIRST.md                                    |  23 ++\n SUPPORT_BLOCK1_READ_FIRST.md                       |  37 +++\n block6-update/START_HERE.md                        |  90 +++++++\n block6-update/block6.patch                         | 227 +++++++++++++++++\n category.py                                        |  19 ++\n docs/AI_USAGE_LOG.md                               | 103 +++++++-\n docs/BLOCK6_REVIEW.md                              |  76 ++++++\n docs/DAY1_FINAL_REPORT.md                          |  88 +++++++\n docs/REQUIREMENTS.md                               | 268 ++++++++++++++++++-\n docs/WORKLOG.md                                    | 146 +++++------\n docs/day2/ADVERSARIAL_CASES.csv                    |   7 +\n docs/day2/BLOCK_B_EVIDENCE_NOTES.md                |  27 ++\n docs/day2/BLOCK_C_EVIDENCE_NOTES.md                |  36 +++\n docs/day2/BLOCK_D_DELIVERY_NOTES.md                |  21 ++\n docs/day2/DECISION_LOG.md                          | 106 ++++++++\n docs/day2/DELIVERY_PLAN.md                         |  80 ++++++\n docs/day2/EDGE_CASES_AND_RISKS.md                  | 109 ++++++++\n docs/day2/EXPECTED_OUTPUTS.csv                     |  13 +\n docs/day2/issues/ISSUE-01-csv-input-errors.md      |  63 +++++\n .../day2/issues/ISSUE-02-triage-rules-templates.md |  90 +++++++\n docs/day2/issues/ISSUE-03-export-tests.md          |  69 +++++\n docs/day3/BLOCK_C_SCOPE_NOTE.md                    |  30 +++\n docs/day3/BLOCK_D_EVIDENCE_STATUS.md               |  11 +\n docs/day3/BLOCK_D_SCOPE_NOTE.md                    |  42 +++\n docs/day3/BLOCK_E_SCOPE_NOTE.md                    |  34 +++\n docs/day3/csv_learning_sample.csv                  |   3 +\n docs/day5/BLOCK_A_AUDIT.md                         | 109 ++++++++\n docs/day5/BLOCK_C_EVIDENCE.md                      |  40 +++\n docs/day5/BLOCK_C_REGRESSION.txt                   | Bin 0 -> 13742 bytes\n docs/day5/BLOCK_D_EVIDENCE.md                      |  74 ++++++\n docs/day5/BLOCK_D_REGRESSION.txt                   | Bin 0 -> 14048 bytes\n docs/day5/BLOCK_E_REPRODUCIBILITY.md               |  74 ++++++\n docs/day5/BLOCK_F_HANDOVER.md                      |  44 ++++\n docs/day5/evidence/block-a-assistant-terminal.txt  | 106 ++++++++\n ...-a-local-inspection-20261123-151340-018369.json | 182 +++++++++++++\n ...ock-a-local-terminal-20261123-151340-018369.txt | 112 ++++++++\n docs/day5/evidence/block-a-output-inspection.json  |  81 ++++++\n ...ock-a-pre-run-output-20261123-151340-018369.csv |  13 +\n .../block-a-predictions-before-execution.json      |  33 +++\n docs/evidence/block6-assistant-verification.txt    |  48 ++++\n docs/evidence/day1-handover-verification.txt       |  44 ++++\n docs/evidence/day1-windows-verification.txt        |  27 ++\n exporter.py                                        |  25 ++\n final-update/START_HERE.md                         |  79 ++++++\n final-update/SUBMISSION_EMAIL.md                   |  18 ++\n final-update/final.patch                           | 283 +++++++++++++++++++++\n main.py                                            |  99 ++++++-\n priority.py                                        |  22 ++\n review.py                                          |  65 +++++\n tests/test_day4_verification.py                    |  91 +++++++\n tests/test_day5_adversarial.py                     | 127 +++++++++\n tests/test_day5_block_d_diagnostic.py              |  44 ++++\n tests/test_day5_negative_inputs.py                 |  97 +++++++\n tests/test_export.py                               |  49 ++++\n tests/test_priority.py                             |  38 +++\n tests/test_reader.py                               |  27 ++\n tests/test_review.py                               |  71 ++++++\n 61 files changed, 4022 insertions(+), 111 deletions(-)\n"
+    },
+    {
+      "label": "Application",
+      "command": [
+        "C:\\Users\\MR. BRUTAL\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "main.py"
+      ],
+      "exit_code": 0,
+      "output": "Loaded 12 tickets\nExported 12 triaged tickets to output/triaged.csv\n"
+    },
+    {
+      "label": "Exact Day 5 production regression",
+      "command": [
+        "C:\\Users\\MR. BRUTAL\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-m",
+        "unittest",
+        "tests.test_day4_verification",
+        "tests.test_day5_adversarial",
+        "tests.test_day5_negative_inputs",
+        "tests.test_export",
+        "tests.test_priority",
+        "tests.test_reader",
+        "tests.test_review",
+        "tests.test_smoke",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "test_all_12_expected_classifications (tests.test_day4_verification.TestDay4Verification.test_all_12_expected_classifications) ... ok\ntest_output_csv_contains_all_expected_ids (tests.test_day4_verification.TestDay4Verification.test_output_csv_contains_all_expected_ids) ... ok\ntest_output_csv_matches_required_schema_and_count (tests.test_day4_verification.TestDay4Verification.test_output_csv_matches_required_schema_and_count) ... ok\ntest_reply_drafts_are_category_specific_and_non_action_claiming (tests.test_day4_verification.TestDay4Verification.test_reply_drafts_are_category_specific_and_non_action_claiming) ... ok\ntest_c01_multiple_keywords_follow_category_precedence (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c01_multiple_keywords_follow_category_precedence) ... ok\ntest_c02_high_priority_non_billing_category (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c02_high_priority_non_billing_category) ... ok\ntest_c03_unknown_category_requires_human_review (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c03_unknown_category_requires_human_review) ... ok\ntest_c04_keyword_matching_is_case_insensitive (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c04_keyword_matching_is_case_insensitive) ... ok\ntest_c05_csv_preserves_commas_quotes_and_embedded_newlines (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c05_csv_preserves_commas_quotes_and_embedded_newlines) ... ok\ntest_c06_repeated_execution_overwrites_without_duplicate_rows (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c06_repeated_execution_overwrites_without_duplicate_rows) ... ok\ntest_c07_reply_draft_avoids_unauthorized_commitments (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c07_reply_draft_avoids_unauthorized_commitments) ... ok\ntest_blank_ticket_id_is_skipped_with_warning (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_blank_ticket_id_is_skipped_with_warning) ... ok\ntest_empty_and_whitespace_messages_are_skipped_with_warning (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_empty_and_whitespace_messages_are_skipped_with_warning) ... ok\ntest_headers_only_file_returns_no_records (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_headers_only_file_returns_no_records) ... ok\ntest_missing_file_has_controlled_error (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_missing_file_has_controlled_error) ... ok\ntest_missing_message_value_is_skipped_and_valid_row_preserved (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_missing_message_value_is_skipped_and_valid_row_preserved) ... ok\ntest_missing_required_column_has_clear_error (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_missing_required_column_has_clear_error) ... ok\ntest_utf8_bom_header_is_supported (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_utf8_bom_header_is_supported) ... ok\ntest_exports_exact_schema_and_all_tickets (tests.test_export.TestExportTriagedTickets.test_exports_exact_schema_and_all_tickets) ... ok\ntest_rerun_overwrites_instead_of_appending (tests.test_export.TestExportTriagedTickets.test_rerun_overwrites_instead_of_appending) ... ok\ntest_each_approved_trigger_is_high (tests.test_priority.TestAssignPriority.test_each_approved_trigger_is_high) ... ok\ntest_empty_message_is_normal (tests.test_priority.TestAssignPriority.test_empty_message_is_normal) ... ok\ntest_matching_is_case_insensitive (tests.test_priority.TestAssignPriority.test_matching_is_case_insensitive) ... ok\ntest_non_matching_message_is_normal (tests.test_priority.TestAssignPriority.test_non_matching_message_is_normal) ... ok\ntest_non_string_message_raises_type_error (tests.test_priority.TestAssignPriority.test_non_string_message_raises_type_error) ... ok\ntest_preserves_first_ticket_values (tests.test_reader.TestReadTickets.test_preserves_first_ticket_values) ... ok\ntest_preserves_required_fields (tests.test_reader.TestReadTickets.test_preserves_required_fields) ... ok\ntest_reads_12_source_tickets (tests.test_reader.TestReadTickets.test_reads_12_source_tickets) ... ok\ntest_category_and_priority_are_case_insensitive (tests.test_review.TestNeedsHumanReview.test_category_and_priority_are_case_insensitive) ... ok\ntest_high_priority_requires_review (tests.test_review.TestNeedsHumanReview.test_high_priority_requires_review) ... ok\ntest_other_category_requires_review_even_when_normal (tests.test_review.TestNeedsHumanReview.test_other_category_requires_review_even_when_normal) ... ok\ntest_rejects_unknown_category (tests.test_review.TestNeedsHumanReview.test_rejects_unknown_category) ... ok\ntest_rejects_unknown_priority (tests.test_review.TestNeedsHumanReview.test_rejects_unknown_priority) ... ok\ntest_supported_normal_category_does_not_require_review (tests.test_review.TestNeedsHumanReview.test_supported_normal_category_does_not_require_review) ... ok\ntest_adds_review_flag_and_reply_draft (tests.test_review.TestProcessTicket.test_adds_review_flag_and_reply_draft) ... ok\ntest_drafts_do_not_claim_actions_or_send_messages (tests.test_review.TestProcessTicket.test_drafts_do_not_claim_actions_or_send_messages) ... ok\ntest_missing_required_field_is_rejected (tests.test_review.TestProcessTicket.test_missing_required_field_is_rejected) ... ok\ntest_provides_four_category_specific_fixed_drafts (tests.test_review.TestProcessTicket.test_provides_four_category_specific_fixed_drafts) ... ok\ntest_python_runs (tests.test_smoke.StarterSmokeTest.test_python_runs) ... ok\n\n----------------------------------------------------------------------\nRan 39 tests in 0.084s\n\nOK\nC01 | expected='billing' | actual='billing' | PASS\nC02 | expected={'category': 'account', 'priority': 'high', 'needs_human_review': True} | actual={'category': 'account', 'priority': 'high', 'needs_human_review': True} | PASS\nC03 | expected={'category': 'other', 'needs_human_review': True} | actual={'category': 'other', 'needs_human_review': True} | PASS\nC04 | expected={'category': 'billing', 'priority': 'normal'} | actual={'category': 'billing', 'priority': 'normal'} | PASS\nC05 | expected=[{'ticket_id': 'C05', 'message': 'Payment failed, \"please help\" with this issue.\\nSecond line contains more detail.'}] | actual=[{'ticket_id': 'C05', 'message': 'Payment failed, \"please help\" with this issue.\\nSecond line contains more detail.'}] | PASS\nC06 | expected=(2, 2) | actual=(2, 2) | PASS\nC07 | expected={'billing': False, 'account': False, 'technical': False, 'other': False} | actual={'billing': False, 'account': False, 'technical': False, 'other': False} | PASS\nWARNING: Skipping row 2: missing message value\n"
+    },
+    {
+      "label": "Full discovery, including the documented diagnostic",
+      "command": [
+        "C:\\Users\\MR. BRUTAL\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "exit_code": 1,
+      "output": "test_all_12_expected_classifications (test_day4_verification.TestDay4Verification.test_all_12_expected_classifications) ... ok\ntest_output_csv_contains_all_expected_ids (test_day4_verification.TestDay4Verification.test_output_csv_contains_all_expected_ids) ... ok\ntest_output_csv_matches_required_schema_and_count (test_day4_verification.TestDay4Verification.test_output_csv_matches_required_schema_and_count) ... ok\ntest_reply_drafts_are_category_specific_and_non_action_claiming (test_day4_verification.TestDay4Verification.test_reply_drafts_are_category_specific_and_non_action_claiming) ... ok\ntest_c01_multiple_keywords_follow_category_precedence (test_day5_adversarial.TestDay5AdversarialBoundaries.test_c01_multiple_keywords_follow_category_precedence) ... ok\ntest_c02_high_priority_non_billing_category (test_day5_adversarial.TestDay5AdversarialBoundaries.test_c02_high_priority_non_billing_category) ... ok\ntest_c03_unknown_category_requires_human_review (test_day5_adversarial.TestDay5AdversarialBoundaries.test_c03_unknown_category_requires_human_review) ... ok\ntest_c04_keyword_matching_is_case_insensitive (test_day5_adversarial.TestDay5AdversarialBoundaries.test_c04_keyword_matching_is_case_insensitive) ... ok\ntest_c05_csv_preserves_commas_quotes_and_embedded_newlines (test_day5_adversarial.TestDay5AdversarialBoundaries.test_c05_csv_preserves_commas_quotes_and_embedded_newlines) ... ok\ntest_c06_repeated_execution_overwrites_without_duplicate_rows (test_day5_adversarial.TestDay5AdversarialBoundaries.test_c06_repeated_execution_overwrites_without_duplicate_rows) ... ok\ntest_c07_reply_draft_avoids_unauthorized_commitments (test_day5_adversarial.TestDay5AdversarialBoundaries.test_c07_reply_draft_avoids_unauthorized_commitments) ... ok\ntest_duplicate_ticket_ids_should_be_rejected_exercise (test_day5_block_d_diagnostic.TestDay5BlockDDiagnostic.test_duplicate_ticket_ids_should_be_rejected_exercise) ... FAIL\ntest_blank_ticket_id_is_skipped_with_warning (test_day5_negative_inputs.TestNegativeInputHandling.test_blank_ticket_id_is_skipped_with_warning) ... ok\ntest_empty_and_whitespace_messages_are_skipped_with_warning (test_day5_negative_inputs.TestNegativeInputHandling.test_empty_and_whitespace_messages_are_skipped_with_warning) ... ok\ntest_headers_only_file_returns_no_records (test_day5_negative_inputs.TestNegativeInputHandling.test_headers_only_file_returns_no_records) ... ok\ntest_missing_file_has_controlled_error (test_day5_negative_inputs.TestNegativeInputHandling.test_missing_file_has_controlled_error) ... ok\ntest_missing_message_value_is_skipped_and_valid_row_preserved (test_day5_negative_inputs.TestNegativeInputHandling.test_missing_message_value_is_skipped_and_valid_row_preserved) ... ok\ntest_missing_required_column_has_clear_error (test_day5_negative_inputs.TestNegativeInputHandling.test_missing_required_column_has_clear_error) ... ok\ntest_utf8_bom_header_is_supported (test_day5_negative_inputs.TestNegativeInputHandling.test_utf8_bom_header_is_supported) ... ok\ntest_exports_exact_schema_and_all_tickets (test_export.TestExportTriagedTickets.test_exports_exact_schema_and_all_tickets) ... ok\ntest_rerun_overwrites_instead_of_appending (test_export.TestExportTriagedTickets.test_rerun_overwrites_instead_of_appending) ... ok\ntest_each_approved_trigger_is_high (test_priority.TestAssignPriority.test_each_approved_trigger_is_high) ... ok\ntest_empty_message_is_normal (test_priority.TestAssignPriority.test_empty_message_is_normal) ... ok\ntest_matching_is_case_insensitive (test_priority.TestAssignPriority.test_matching_is_case_insensitive) ... ok\ntest_non_matching_message_is_normal (test_priority.TestAssignPriority.test_non_matching_message_is_normal) ... ok\ntest_non_string_message_raises_type_error (test_priority.TestAssignPriority.test_non_string_message_raises_type_error) ... ok\ntest_preserves_first_ticket_values (test_reader.TestReadTickets.test_preserves_first_ticket_values) ... ok\ntest_preserves_required_fields (test_reader.TestReadTickets.test_preserves_required_fields) ... ok\ntest_reads_12_source_tickets (test_reader.TestReadTickets.test_reads_12_source_tickets) ... ok\ntest_category_and_priority_are_case_insensitive (test_review.TestNeedsHumanReview.test_category_and_priority_are_case_insensitive) ... ok\ntest_high_priority_requires_review (test_review.TestNeedsHumanReview.test_high_priority_requires_review) ... ok\ntest_other_category_requires_review_even_when_normal (test_review.TestNeedsHumanReview.test_other_category_requires_review_even_when_normal) ... ok\ntest_rejects_unknown_category (test_review.TestNeedsHumanReview.test_rejects_unknown_category) ... ok\ntest_rejects_unknown_priority (test_review.TestNeedsHumanReview.test_rejects_unknown_priority) ... ok\ntest_supported_normal_category_does_not_require_review (test_review.TestNeedsHumanReview.test_supported_normal_category_does_not_require_review) ... ok\ntest_adds_review_flag_and_reply_draft (test_review.TestProcessTicket.test_adds_review_flag_and_reply_draft) ... ok\ntest_drafts_do_not_claim_actions_or_send_messages (test_review.TestProcessTicket.test_drafts_do_not_claim_actions_or_send_messages) ... ok\ntest_missing_required_field_is_rejected (test_review.TestProcessTicket.test_missing_required_field_is_rejected) ... ok\ntest_provides_four_category_specific_fixed_drafts (test_review.TestProcessTicket.test_provides_four_category_specific_fixed_drafts) ... ok\ntest_python_runs (test_smoke.StarterSmokeTest.test_python_runs) ... ok\n\n======================================================================\nFAIL: test_duplicate_ticket_ids_should_be_rejected_exercise (test_day5_block_d_diagnostic.TestDay5BlockDDiagnostic.test_duplicate_ticket_ids_should_be_rejected_exercise)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"E:\\Support Inbox Triage\\tests\\test_day5_block_d_diagnostic.py\", line 39, in test_duplicate_ticket_ids_should_be_rejected_exercise\n    with self.assertRaises(ValueError):\n         ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^\nAssertionError: ValueError not raised\n\n----------------------------------------------------------------------\nRan 40 tests in 0.094s\n\nFAILED (failures=1)\nC01 | expected='billing' | actual='billing' | PASS\nC02 | expected={'category': 'account', 'priority': 'high', 'needs_human_review': True} | actual={'category': 'account', 'priority': 'high', 'needs_human_review': True} | PASS\nC03 | expected={'category': 'other', 'needs_human_review': True} | actual={'category': 'other', 'needs_human_review': True} | PASS\nC04 | expected={'category': 'billing', 'priority': 'normal'} | actual={'category': 'billing', 'priority': 'normal'} | PASS\nC05 | expected=[{'ticket_id': 'C05', 'message': 'Payment failed, \"please help\" with this issue.\\nSecond line contains more detail.'}] | actual=[{'ticket_id': 'C05', 'message': 'Payment failed, \"please help\" with this issue.\\nSecond line contains more detail.'}] | PASS\nC06 | expected=(2, 2) | actual=(2, 2) | PASS\nC07 | expected={'billing': False, 'account': False, 'technical': False, 'other': False} | actual={'billing': False, 'account': False, 'technical': False, 'other': False} | PASS\nWARNING: Skipping row 2: missing message value\n"
+    },
+    {
+      "label": "Whitespace check",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "exit_code": 0,
+      "output": ""
+    }
+  ],
+  "status": "PARTIAL - baseline captured; PR/reviewer and personal review gates require confirmation",
+  "personal_review": "Not claimed by automation",
+  "head": "dcb80c0fcea63661ccfe71ecdaa5ac721eb2ac84",
+  "branch": "feature/day5-reliability",
+  "remote_sha": "dcb80c0fcea63661ccfe71ecdaa5ac721eb2ac84",
+  "remote_verified_current": true,
+  "previous_output_backup": "docs/day6/evidence/block-a-local-20261124-132536-409842-previous-output.csv",
+  "production_tests": {
+    "executed": 39,
+    "summary_parsed": true,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "expected_failures": 0,
+    "unexpected_successes": 0,
+    "passed": 39,
+    "failing_tests": [],
+    "error_tests": []
+  },
+  "all_discovered_tests": {
+    "executed": 40,
+    "summary_parsed": true,
+    "failures": 1,
+    "errors": 0,
+    "skipped": 0,
+    "expected_failures": 0,
+    "unexpected_successes": 0,
+    "passed": 39,
+    "failing_tests": [
+      "test_duplicate_ticket_ids_should_be_rejected_exercise (test_day5_block_d_diagnostic.TestDay5BlockDDiagnostic.test_duplicate_ticket_ids_should_be_rejected_exercise)"
+    ],
+    "error_tests": []
+  },
+  "csv_inspection": {
+    "columns": [
+      "ticket_id",
+      "message",
+      "category",
+      "priority",
+      "needs_human_review",
+      "reply_draft"
+    ],
+    "records": 12,
+    "exact_schema": true,
+    "source_ids_and_messages_preserved": true,
+    "source_sha256_before": "7aa7a7881e9d54cefcf958ff1ea4e00cc9887dee6e475fc12cec1fa82d219f14",
+    "source_sha256_after": "7aa7a7881e9d54cefcf958ff1ea4e00cc9887dee6e475fc12cec1fa82d219f14",
+    "source_unchanged": true,
+    "output_sha256": "bf36ab0c7df95a2503c6da046503af66108b5f2e09b42ce6dddb9071844ef5c6"
+  },
+  "baseline_matches": true,
+  "pull_request": {
+    "checked_at_pkt": "2026-11-24T13:25:42.287194+05:00",
+    "proposed_base": "main",
+    "head_branch": "feature/day5-reliability",
+    "approval": "Not established by this script",
+    "repository_default_branch": "main",
+    "matching_open_pull_requests": [],
+    "status": "PARTIAL: no matching open PR; draft PR still required",
+    "review_state": "No PR exists on this head at this check; no PR feedback is available"
+  },
+  "finished_at_pkt": "2026-11-24T13:25:43.963494+05:00"
+}

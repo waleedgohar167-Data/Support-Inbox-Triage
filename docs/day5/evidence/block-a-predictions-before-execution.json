@@ -1,0 +1,33 @@
+{
+  "provenance": "Assistant predictions written before running the application or tests in this fresh checkout; not a claim of candidate independent prediction.",
+  "source_commit": "71878b5e33c246fdbf6b2b7d68b008f8f82e2281",
+  "predictions": [
+    {
+      "ticket_id": "T002",
+      "message": "I was charged twice for last month",
+      "category": "billing",
+      "priority": "high",
+      "needs_human_review": true,
+      "reply_draft": "Thank you for contacting us about your billing concern. Our support team will review the details and follow up with you.",
+      "reason": "charged matches billing; charged twice triggers high; high requires review."
+    },
+    {
+      "ticket_id": "T009",
+      "message": "URGENT: my account is locked",
+      "category": "account",
+      "priority": "high",
+      "needs_human_review": true,
+      "reply_draft": "Thank you for contacting us about your account. Our support team will review the details and follow up with you.",
+      "reason": "account/locked match account with no billing term; urgent/locked trigger high independently; review is true."
+    },
+    {
+      "ticket_id": "T008",
+      "message": "Can you explain your pricing plans?",
+      "category": "other",
+      "priority": "normal",
+      "needs_human_review": true,
+      "reply_draft": "Thank you for contacting support. Our team will review your message and determine the appropriate next steps.",
+      "reason": "No category or high-priority trigger matches; other requires review even at normal priority."
+    }
+  ]
+}

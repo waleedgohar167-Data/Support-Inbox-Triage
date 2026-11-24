@@ -1,0 +1,27 @@
+Support Inbox Triage — Windows verification supplied by Waleed Khan
+Evidence provenance: copied from terminal output the candidate supplied in the conversation on 17 November 2026.
+This is an archived record of those outputs, not a new assistant-run Windows session.
+Exact execution timestamps and process exit codes were not supplied.
+The excerpts below came from separate messages; they are not presented as one continuous session.
+
+A. Earlier local tool-version output
+Python 3.13.5
+git version 2.47.1.windows.1
+
+B. Most recent complete application and test output supplied before applying the Block 6 documentation patch
+PS E:\Support Inbox Triage> python main.py
+>>
+Project setup OK — core ticket triage is not built yet.
+PS E:\Support Inbox Triage> python -m unittest discover -s tests -v
+test_python_runs (test_smoke.StarterSmokeTest.test_python_runs) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.001s
+
+OK
+PS E:\Support Inbox Triage>
+
+Interpretation: the application printed its setup message; one supplied test passed with no failures or errors reported.
+Limit: the test only asserts that 1 + 1 == 2 and does not exercise the application or ticket handling.
+The initial and Block 6 commits contain identical main.py, tests/test_smoke.py, and CSV files.
+This record does not establish when a checkpoint email was sent or that an independent understanding assessment was completed.
