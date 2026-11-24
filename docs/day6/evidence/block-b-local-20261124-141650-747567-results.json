@@ -1,0 +1,265 @@
+{
+  "started_at_pkt": "2026-11-24T14:16:50.747567+05:00",
+  "head": "57cad342da0db7ddc52a669270fe2ef9dd0c038d",
+  "branch": "feature/day5-reliability",
+  "python": "3.13.5 (tags/v3.13.5:6cb20a2, Jun 11 2025, 16:15:46) [MSC v.1943 64 bit (AMD64)]",
+  "trace_sha256": "4797a0b06a5d5f079a056838355cd659718196d2ac951e204c21d9605b2ef036",
+  "trace_path": "docs/day6/INDEPENDENT_TRACE.md",
+  "runs": [
+    {
+      "label": "Production suite before generating output",
+      "command": [
+        "C:\\Users\\MR. BRUTAL\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-m",
+        "unittest",
+        "tests.test_day4_verification",
+        "tests.test_day5_adversarial",
+        "tests.test_day5_negative_inputs",
+        "tests.test_export",
+        "tests.test_priority",
+        "tests.test_reader",
+        "tests.test_review",
+        "tests.test_smoke",
+        "-v"
+      ],
+      "cwd": "C:\\Users\\MR96F9~1.BRU\\AppData\\Local\\Temp\\triage-day6-integrity-4ya627fm",
+      "exit_code": 1,
+      "output": "test_all_12_expected_classifications (tests.test_day4_verification.TestDay4Verification.test_all_12_expected_classifications) ... ok\ntest_output_csv_contains_all_expected_ids (tests.test_day4_verification.TestDay4Verification.test_output_csv_contains_all_expected_ids) ... ERROR\ntest_output_csv_matches_required_schema_and_count (tests.test_day4_verification.TestDay4Verification.test_output_csv_matches_required_schema_and_count) ... FAIL\ntest_reply_drafts_are_category_specific_and_non_action_claiming (tests.test_day4_verification.TestDay4Verification.test_reply_drafts_are_category_specific_and_non_action_claiming) ... ok\ntest_c01_multiple_keywords_follow_category_precedence (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c01_multiple_keywords_follow_category_precedence) ... ok\ntest_c02_high_priority_non_billing_category (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c02_high_priority_non_billing_category) ... ok\ntest_c03_unknown_category_requires_human_review (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c03_unknown_category_requires_human_review) ... ok\ntest_c04_keyword_matching_is_case_insensitive (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c04_keyword_matching_is_case_insensitive) ... ok\ntest_c05_csv_preserves_commas_quotes_and_embedded_newlines (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c05_csv_preserves_commas_quotes_and_embedded_newlines) ... ok\ntest_c06_repeated_execution_overwrites_without_duplicate_rows (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c06_repeated_execution_overwrites_without_duplicate_rows) ... ok\ntest_c07_reply_draft_avoids_unauthorized_commitments (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c07_reply_draft_avoids_unauthorized_commitments) ... ok\ntest_blank_ticket_id_is_skipped_with_warning (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_blank_ticket_id_is_skipped_with_warning) ... ok\ntest_empty_and_whitespace_messages_are_skipped_with_warning (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_empty_and_whitespace_messages_are_skipped_with_warning) ... ok\ntest_headers_only_file_returns_no_records (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_headers_only_file_returns_no_records) ... ok\ntest_missing_file_has_controlled_error (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_missing_file_has_controlled_error) ... ok\ntest_missing_message_value_is_skipped_and_valid_row_preserved (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_missing_message_value_is_skipped_and_valid_row_preserved) ... ok\ntest_missing_required_column_has_clear_error (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_missing_required_column_has_clear_error) ... ok\ntest_utf8_bom_header_is_supported (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_utf8_bom_header_is_supported) ... ok\ntest_exports_exact_schema_and_all_tickets (tests.test_export.TestExportTriagedTickets.test_exports_exact_schema_and_all_tickets) ... ok\ntest_rerun_overwrites_instead_of_appending (tests.test_export.TestExportTriagedTickets.test_rerun_overwrites_instead_of_appending) ... ok\ntest_each_approved_trigger_is_high (tests.test_priority.TestAssignPriority.test_each_approved_trigger_is_high) ... ok\ntest_empty_message_is_normal (tests.test_priority.TestAssignPriority.test_empty_message_is_normal) ... ok\ntest_matching_is_case_insensitive (tests.test_priority.TestAssignPriority.test_matching_is_case_insensitive) ... ok\ntest_non_matching_message_is_normal (tests.test_priority.TestAssignPriority.test_non_matching_message_is_normal) ... ok\ntest_non_string_message_raises_type_error (tests.test_priority.TestAssignPriority.test_non_string_message_raises_type_error) ... ok\ntest_preserves_first_ticket_values (tests.test_reader.TestReadTickets.test_preserves_first_ticket_values) ... ok\ntest_preserves_required_fields (tests.test_reader.TestReadTickets.test_preserves_required_fields) ... ok\ntest_reads_12_source_tickets (tests.test_reader.TestReadTickets.test_reads_12_source_tickets) ... ok\ntest_category_and_priority_are_case_insensitive (tests.test_review.TestNeedsHumanReview.test_category_and_priority_are_case_insensitive) ... ok\ntest_high_priority_requires_review (tests.test_review.TestNeedsHumanReview.test_high_priority_requires_review) ... ok\ntest_other_category_requires_review_even_when_normal (tests.test_review.TestNeedsHumanReview.test_other_category_requires_review_even_when_normal) ... ok\ntest_rejects_unknown_category (tests.test_review.TestNeedsHumanReview.test_rejects_unknown_category) ... ok\ntest_rejects_unknown_priority (tests.test_review.TestNeedsHumanReview.test_rejects_unknown_priority) ... ok\ntest_supported_normal_category_does_not_require_review (tests.test_review.TestNeedsHumanReview.test_supported_normal_category_does_not_require_review) ... ok\ntest_adds_review_flag_and_reply_draft (tests.test_review.TestProcessTicket.test_adds_review_flag_and_reply_draft) ... ok\ntest_drafts_do_not_claim_actions_or_send_messages (tests.test_review.TestProcessTicket.test_drafts_do_not_claim_actions_or_send_messages) ... ok\ntest_missing_required_field_is_rejected (tests.test_review.TestProcessTicket.test_missing_required_field_is_rejected) ... ok\ntest_provides_four_category_specific_fixed_drafts (tests.test_review.TestProcessTicket.test_provides_four_category_specific_fixed_drafts) ... ok\ntest_python_runs (tests.test_smoke.StarterSmokeTest.test_python_runs) ... ok\n\n======================================================================\nERROR: test_output_csv_contains_all_expected_ids (tests.test_day4_verification.TestDay4Verification.test_output_csv_contains_all_expected_ids)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Users\\MR96F9~1.BRU\\AppData\\Local\\Temp\\triage-day6-integrity-4ya627fm\\tests\\test_day4_verification.py\", line 61, in test_output_csv_contains_all_expected_ids\n    with open(\"output/triaged.csv\", \"r\", encoding=\"utf-8\", newline=\"\") as csv_file:\n         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'output/triaged.csv'\n\n======================================================================\nFAIL: test_output_csv_matches_required_schema_and_count (tests.test_day4_verification.TestDay4Verification.test_output_csv_matches_required_schema_and_count)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Users\\MR96F9~1.BRU\\AppData\\Local\\Temp\\triage-day6-integrity-4ya627fm\\tests\\test_day4_verification.py\", line 51, in test_output_csv_matches_required_schema_and_count\n    self.assertTrue(output_path.exists())\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true\n\n----------------------------------------------------------------------\nRan 39 tests in 0.096s\n\nFAILED (failures=1, errors=1)\nC01 | expected='billing' | actual='billing' | PASS\nC02 | expected={'category': 'account', 'priority': 'high', 'needs_human_review': True} | actual={'category': 'account', 'priority': 'high', 'needs_human_review': True} | PASS\nC03 | expected={'category': 'other', 'needs_human_review': True} | actual={'category': 'other', 'needs_human_review': True} | PASS\nC04 | expected={'category': 'billing', 'priority': 'normal'} | actual={'category': 'billing', 'priority': 'normal'} | PASS\nC05 | expected=[{'ticket_id': 'C05', 'message': 'Payment failed, \"please help\" with this issue.\\nSecond line contains more detail.'}] | actual=[{'ticket_id': 'C05', 'message': 'Payment failed, \"please help\" with this issue.\\nSecond line contains more detail.'}] | PASS\nC06 | expected=(2, 2) | actual=(2, 2) | PASS\nC07 | expected={'billing': False, 'account': False, 'technical': False, 'other': False} | actual={'billing': False, 'account': False, 'technical': False, 'other': False} | PASS\nWARNING: Skipping row 2: missing message value\n",
+      "test_counts": {
+        "parsed": true,
+        "executed": 39,
+        "failures": 1,
+        "errors": 1,
+        "skipped": 0,
+        "expected failures": 0,
+        "unexpected successes": 0,
+        "passed": 37,
+        "failing_tests": [
+          "test_output_csv_matches_required_schema_and_count (tests.test_day4_verification.TestDay4Verification.test_output_csv_matches_required_schema_and_count)"
+        ],
+        "error_tests": [
+          "test_output_csv_contains_all_expected_ids (tests.test_day4_verification.TestDay4Verification.test_output_csv_contains_all_expected_ids)"
+        ]
+      }
+    },
+    {
+      "label": "Generate scratch application output",
+      "command": [
+        "C:\\Users\\MR. BRUTAL\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "main.py"
+      ],
+      "cwd": "C:\\Users\\MR96F9~1.BRU\\AppData\\Local\\Temp\\triage-day6-integrity-4ya627fm",
+      "exit_code": 0,
+      "output": "Loaded 12 tickets\nExported 12 triaged tickets to output/triaged.csv\n",
+      "test_counts": {
+        "parsed": false
+      }
+    },
+    {
+      "label": "Production baseline after application",
+      "command": [
+        "C:\\Users\\MR. BRUTAL\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-m",
+        "unittest",
+        "tests.test_day4_verification",
+        "tests.test_day5_adversarial",
+        "tests.test_day5_negative_inputs",
+        "tests.test_export",
+        "tests.test_priority",
+        "tests.test_reader",
+        "tests.test_review",
+        "tests.test_smoke",
+        "-v"
+      ],
+      "cwd": "C:\\Users\\MR96F9~1.BRU\\AppData\\Local\\Temp\\triage-day6-integrity-4ya627fm",
+      "exit_code": 0,
+      "output": "test_all_12_expected_classifications (tests.test_day4_verification.TestDay4Verification.test_all_12_expected_classifications) ... ok\ntest_output_csv_contains_all_expected_ids (tests.test_day4_verification.TestDay4Verification.test_output_csv_contains_all_expected_ids) ... ok\ntest_output_csv_matches_required_schema_and_count (tests.test_day4_verification.TestDay4Verification.test_output_csv_matches_required_schema_and_count) ... ok\ntest_reply_drafts_are_category_specific_and_non_action_claiming (tests.test_day4_verification.TestDay4Verification.test_reply_drafts_are_category_specific_and_non_action_claiming) ... ok\ntest_c01_multiple_keywords_follow_category_precedence (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c01_multiple_keywords_follow_category_precedence) ... ok\ntest_c02_high_priority_non_billing_category (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c02_high_priority_non_billing_category) ... ok\ntest_c03_unknown_category_requires_human_review (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c03_unknown_category_requires_human_review) ... ok\ntest_c04_keyword_matching_is_case_insensitive (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c04_keyword_matching_is_case_insensitive) ... ok\ntest_c05_csv_preserves_commas_quotes_and_embedded_newlines (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c05_csv_preserves_commas_quotes_and_embedded_newlines) ... ok\ntest_c06_repeated_execution_overwrites_without_duplicate_rows (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c06_repeated_execution_overwrites_without_duplicate_rows) ... ok\ntest_c07_reply_draft_avoids_unauthorized_commitments (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c07_reply_draft_avoids_unauthorized_commitments) ... ok\ntest_blank_ticket_id_is_skipped_with_warning (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_blank_ticket_id_is_skipped_with_warning) ... ok\ntest_empty_and_whitespace_messages_are_skipped_with_warning (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_empty_and_whitespace_messages_are_skipped_with_warning) ... ok\ntest_headers_only_file_returns_no_records (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_headers_only_file_returns_no_records) ... ok\ntest_missing_file_has_controlled_error (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_missing_file_has_controlled_error) ... ok\ntest_missing_message_value_is_skipped_and_valid_row_preserved (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_missing_message_value_is_skipped_and_valid_row_preserved) ... ok\ntest_missing_required_column_has_clear_error (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_missing_required_column_has_clear_error) ... ok\ntest_utf8_bom_header_is_supported (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_utf8_bom_header_is_supported) ... ok\ntest_exports_exact_schema_and_all_tickets (tests.test_export.TestExportTriagedTickets.test_exports_exact_schema_and_all_tickets) ... ok\ntest_rerun_overwrites_instead_of_appending (tests.test_export.TestExportTriagedTickets.test_rerun_overwrites_instead_of_appending) ... ok\ntest_each_approved_trigger_is_high (tests.test_priority.TestAssignPriority.test_each_approved_trigger_is_high) ... ok\ntest_empty_message_is_normal (tests.test_priority.TestAssignPriority.test_empty_message_is_normal) ... ok\ntest_matching_is_case_insensitive (tests.test_priority.TestAssignPriority.test_matching_is_case_insensitive) ... ok\ntest_non_matching_message_is_normal (tests.test_priority.TestAssignPriority.test_non_matching_message_is_normal) ... ok\ntest_non_string_message_raises_type_error (tests.test_priority.TestAssignPriority.test_non_string_message_raises_type_error) ... ok\ntest_preserves_first_ticket_values (tests.test_reader.TestReadTickets.test_preserves_first_ticket_values) ... ok\ntest_preserves_required_fields (tests.test_reader.TestReadTickets.test_preserves_required_fields) ... ok\ntest_reads_12_source_tickets (tests.test_reader.TestReadTickets.test_reads_12_source_tickets) ... ok\ntest_category_and_priority_are_case_insensitive (tests.test_review.TestNeedsHumanReview.test_category_and_priority_are_case_insensitive) ... ok\ntest_high_priority_requires_review (tests.test_review.TestNeedsHumanReview.test_high_priority_requires_review) ... ok\ntest_other_category_requires_review_even_when_normal (tests.test_review.TestNeedsHumanReview.test_other_category_requires_review_even_when_normal) ... ok\ntest_rejects_unknown_category (tests.test_review.TestNeedsHumanReview.test_rejects_unknown_category) ... ok\ntest_rejects_unknown_priority (tests.test_review.TestNeedsHumanReview.test_rejects_unknown_priority) ... ok\ntest_supported_normal_category_does_not_require_review (tests.test_review.TestNeedsHumanReview.test_supported_normal_category_does_not_require_review) ... ok\ntest_adds_review_flag_and_reply_draft (tests.test_review.TestProcessTicket.test_adds_review_flag_and_reply_draft) ... ok\ntest_drafts_do_not_claim_actions_or_send_messages (tests.test_review.TestProcessTicket.test_drafts_do_not_claim_actions_or_send_messages) ... ok\ntest_missing_required_field_is_rejected (tests.test_review.TestProcessTicket.test_missing_required_field_is_rejected) ... ok\ntest_provides_four_category_specific_fixed_drafts (tests.test_review.TestProcessTicket.test_provides_four_category_specific_fixed_drafts) ... ok\ntest_python_runs (tests.test_smoke.StarterSmokeTest.test_python_runs) ... ok\n\n----------------------------------------------------------------------\nRan 39 tests in 0.067s\n\nOK\nC01 | expected='billing' | actual='billing' | PASS\nC02 | expected={'category': 'account', 'priority': 'high', 'needs_human_review': True} | actual={'category': 'account', 'priority': 'high', 'needs_human_review': True} | PASS\nC03 | expected={'category': 'other', 'needs_human_review': True} | actual={'category': 'other', 'needs_human_review': True} | PASS\nC04 | expected={'category': 'billing', 'priority': 'normal'} | actual={'category': 'billing', 'priority': 'normal'} | PASS\nC05 | expected=[{'ticket_id': 'C05', 'message': 'Payment failed, \"please help\" with this issue.\\nSecond line contains more detail.'}] | actual=[{'ticket_id': 'C05', 'message': 'Payment failed, \"please help\" with this issue.\\nSecond line contains more detail.'}] | PASS\nC06 | expected=(2, 2) | actual=(2, 2) | PASS\nC07 | expected={'billing': False, 'account': False, 'technical': False, 'other': False} | actual={'billing': False, 'account': False, 'technical': False, 'other': False} | PASS\nWARNING: Skipping row 2: missing message value\n",
+      "test_counts": {
+        "parsed": true,
+        "executed": 39,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "expected failures": 0,
+        "unexpected successes": 0,
+        "passed": 39,
+        "failing_tests": [],
+        "error_tests": []
+      }
+    },
+    {
+      "label": "Selected test before mutation",
+      "command": [
+        "C:\\Users\\MR. BRUTAL\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-m",
+        "unittest",
+        "tests.test_review.TestNeedsHumanReview.test_high_priority_requires_review",
+        "-v"
+      ],
+      "cwd": "C:\\Users\\MR96F9~1.BRU\\AppData\\Local\\Temp\\triage-day6-integrity-4ya627fm",
+      "exit_code": 0,
+      "output": "test_high_priority_requires_review (tests.test_review.TestNeedsHumanReview.test_high_priority_requires_review) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+      "test_counts": {
+        "parsed": true,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "expected failures": 0,
+        "unexpected successes": 0,
+        "passed": 1,
+        "failing_tests": [],
+        "error_tests": []
+      }
+    },
+    {
+      "label": "Deliberate scratch-only logic error",
+      "command": [
+        "C:\\Users\\MR. BRUTAL\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-m",
+        "unittest",
+        "tests.test_review.TestNeedsHumanReview.test_high_priority_requires_review",
+        "-v"
+      ],
+      "cwd": "C:\\Users\\MR96F9~1.BRU\\AppData\\Local\\Temp\\triage-day6-integrity-4ya627fm",
+      "exit_code": 1,
+      "output": "test_high_priority_requires_review (tests.test_review.TestNeedsHumanReview.test_high_priority_requires_review) ... FAIL\n\n======================================================================\nFAIL: test_high_priority_requires_review (tests.test_review.TestNeedsHumanReview.test_high_priority_requires_review)\n----------------------------------------------------------------------\nTraceback (most recent call last):\n  File \"C:\\Users\\MR96F9~1.BRU\\AppData\\Local\\Temp\\triage-day6-integrity-4ya627fm\\tests\\test_review.py\", line 8, in test_high_priority_requires_review\n    self.assertTrue(needs_human_review(\"billing\", \"high\"))\n    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: False is not true\n\n----------------------------------------------------------------------\nRan 1 test in 0.001s\n\nFAILED (failures=1)\n",
+      "test_counts": {
+        "parsed": true,
+        "executed": 1,
+        "failures": 1,
+        "errors": 0,
+        "skipped": 0,
+        "expected failures": 0,
+        "unexpected successes": 0,
+        "passed": 0,
+        "failing_tests": [
+          "test_high_priority_requires_review (tests.test_review.TestNeedsHumanReview.test_high_priority_requires_review)"
+        ],
+        "error_tests": []
+      }
+    },
+    {
+      "label": "Selected test after exact restoration",
+      "command": [
+        "C:\\Users\\MR. BRUTAL\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-m",
+        "unittest",
+        "tests.test_review.TestNeedsHumanReview.test_high_priority_requires_review",
+        "-v"
+      ],
+      "cwd": "C:\\Users\\MR96F9~1.BRU\\AppData\\Local\\Temp\\triage-day6-integrity-4ya627fm",
+      "exit_code": 0,
+      "output": "test_high_priority_requires_review (tests.test_review.TestNeedsHumanReview.test_high_priority_requires_review) ... ok\n\n----------------------------------------------------------------------\nRan 1 test in 0.000s\n\nOK\n",
+      "test_counts": {
+        "parsed": true,
+        "executed": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "expected failures": 0,
+        "unexpected successes": 0,
+        "passed": 1,
+        "failing_tests": [],
+        "error_tests": []
+      }
+    },
+    {
+      "label": "Production regression after restoration",
+      "command": [
+        "C:\\Users\\MR. BRUTAL\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "-m",
+        "unittest",
+        "tests.test_day4_verification",
+        "tests.test_day5_adversarial",
+        "tests.test_day5_negative_inputs",
+        "tests.test_export",
+        "tests.test_priority",
+        "tests.test_reader",
+        "tests.test_review",
+        "tests.test_smoke",
+        "-v"
+      ],
+      "cwd": "C:\\Users\\MR96F9~1.BRU\\AppData\\Local\\Temp\\triage-day6-integrity-4ya627fm",
+      "exit_code": 0,
+      "output": "test_all_12_expected_classifications (tests.test_day4_verification.TestDay4Verification.test_all_12_expected_classifications) ... ok\ntest_output_csv_contains_all_expected_ids (tests.test_day4_verification.TestDay4Verification.test_output_csv_contains_all_expected_ids) ... ok\ntest_output_csv_matches_required_schema_and_count (tests.test_day4_verification.TestDay4Verification.test_output_csv_matches_required_schema_and_count) ... ok\ntest_reply_drafts_are_category_specific_and_non_action_claiming (tests.test_day4_verification.TestDay4Verification.test_reply_drafts_are_category_specific_and_non_action_claiming) ... ok\ntest_c01_multiple_keywords_follow_category_precedence (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c01_multiple_keywords_follow_category_precedence) ... ok\ntest_c02_high_priority_non_billing_category (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c02_high_priority_non_billing_category) ... ok\ntest_c03_unknown_category_requires_human_review (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c03_unknown_category_requires_human_review) ... ok\ntest_c04_keyword_matching_is_case_insensitive (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c04_keyword_matching_is_case_insensitive) ... ok\ntest_c05_csv_preserves_commas_quotes_and_embedded_newlines (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c05_csv_preserves_commas_quotes_and_embedded_newlines) ... ok\ntest_c06_repeated_execution_overwrites_without_duplicate_rows (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c06_repeated_execution_overwrites_without_duplicate_rows) ... ok\ntest_c07_reply_draft_avoids_unauthorized_commitments (tests.test_day5_adversarial.TestDay5AdversarialBoundaries.test_c07_reply_draft_avoids_unauthorized_commitments) ... ok\ntest_blank_ticket_id_is_skipped_with_warning (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_blank_ticket_id_is_skipped_with_warning) ... ok\ntest_empty_and_whitespace_messages_are_skipped_with_warning (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_empty_and_whitespace_messages_are_skipped_with_warning) ... ok\ntest_headers_only_file_returns_no_records (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_headers_only_file_returns_no_records) ... ok\ntest_missing_file_has_controlled_error (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_missing_file_has_controlled_error) ... ok\ntest_missing_message_value_is_skipped_and_valid_row_preserved (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_missing_message_value_is_skipped_and_valid_row_preserved) ... ok\ntest_missing_required_column_has_clear_error (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_missing_required_column_has_clear_error) ... ok\ntest_utf8_bom_header_is_supported (tests.test_day5_negative_inputs.TestNegativeInputHandling.test_utf8_bom_header_is_supported) ... ok\ntest_exports_exact_schema_and_all_tickets (tests.test_export.TestExportTriagedTickets.test_exports_exact_schema_and_all_tickets) ... ok\ntest_rerun_overwrites_instead_of_appending (tests.test_export.TestExportTriagedTickets.test_rerun_overwrites_instead_of_appending) ... ok\ntest_each_approved_trigger_is_high (tests.test_priority.TestAssignPriority.test_each_approved_trigger_is_high) ... ok\ntest_empty_message_is_normal (tests.test_priority.TestAssignPriority.test_empty_message_is_normal) ... ok\ntest_matching_is_case_insensitive (tests.test_priority.TestAssignPriority.test_matching_is_case_insensitive) ... ok\ntest_non_matching_message_is_normal (tests.test_priority.TestAssignPriority.test_non_matching_message_is_normal) ... ok\ntest_non_string_message_raises_type_error (tests.test_priority.TestAssignPriority.test_non_string_message_raises_type_error) ... ok\ntest_preserves_first_ticket_values (tests.test_reader.TestReadTickets.test_preserves_first_ticket_values) ... ok\ntest_preserves_required_fields (tests.test_reader.TestReadTickets.test_preserves_required_fields) ... ok\ntest_reads_12_source_tickets (tests.test_reader.TestReadTickets.test_reads_12_source_tickets) ... ok\ntest_category_and_priority_are_case_insensitive (tests.test_review.TestNeedsHumanReview.test_category_and_priority_are_case_insensitive) ... ok\ntest_high_priority_requires_review (tests.test_review.TestNeedsHumanReview.test_high_priority_requires_review) ... ok\ntest_other_category_requires_review_even_when_normal (tests.test_review.TestNeedsHumanReview.test_other_category_requires_review_even_when_normal) ... ok\ntest_rejects_unknown_category (tests.test_review.TestNeedsHumanReview.test_rejects_unknown_category) ... ok\ntest_rejects_unknown_priority (tests.test_review.TestNeedsHumanReview.test_rejects_unknown_priority) ... ok\ntest_supported_normal_category_does_not_require_review (tests.test_review.TestNeedsHumanReview.test_supported_normal_category_does_not_require_review) ... ok\ntest_adds_review_flag_and_reply_draft (tests.test_review.TestProcessTicket.test_adds_review_flag_and_reply_draft) ... ok\ntest_drafts_do_not_claim_actions_or_send_messages (tests.test_review.TestProcessTicket.test_drafts_do_not_claim_actions_or_send_messages) ... ok\ntest_missing_required_field_is_rejected (tests.test_review.TestProcessTicket.test_missing_required_field_is_rejected) ... ok\ntest_provides_four_category_specific_fixed_drafts (tests.test_review.TestProcessTicket.test_provides_four_category_specific_fixed_drafts) ... ok\ntest_python_runs (tests.test_smoke.StarterSmokeTest.test_python_runs) ... ok\n\n----------------------------------------------------------------------\nRan 39 tests in 0.064s\n\nOK\nC01 | expected='billing' | actual='billing' | PASS\nC02 | expected={'category': 'account', 'priority': 'high', 'needs_human_review': True} | actual={'category': 'account', 'priority': 'high', 'needs_human_review': True} | PASS\nC03 | expected={'category': 'other', 'needs_human_review': True} | actual={'category': 'other', 'needs_human_review': True} | PASS\nC04 | expected={'category': 'billing', 'priority': 'normal'} | actual={'category': 'billing', 'priority': 'normal'} | PASS\nC05 | expected=[{'ticket_id': 'C05', 'message': 'Payment failed, \"please help\" with this issue.\\nSecond line contains more detail.'}] | actual=[{'ticket_id': 'C05', 'message': 'Payment failed, \"please help\" with this issue.\\nSecond line contains more detail.'}] | PASS\nC06 | expected=(2, 2) | actual=(2, 2) | PASS\nC07 | expected={'billing': False, 'account': False, 'technical': False, 'other': False} | actual={'billing': False, 'account': False, 'technical': False, 'other': False} | PASS\nWARNING: Skipping row 2: missing message value\n",
+      "test_counts": {
+        "parsed": true,
+        "executed": 39,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "expected failures": 0,
+        "unexpected successes": 0,
+        "passed": 39,
+        "failing_tests": [],
+        "error_tests": []
+      }
+    }
+  ],
+  "candidate_understanding": "Not certified by this script",
+  "experiment": "Change OR to AND in scratch review logic; never change working source",
+  "archive_sha256": "198f42bfdf5332749863c5a1d0d6c4fd3b5c180b5529b5bbb098019a0da7d388",
+  "scratch_path": "C:\\Users\\MR96F9~1.BRU\\AppData\\Local\\Temp\\triage-day6-integrity-4ya627fm",
+  "scratch_had_generated_output": false,
+  "original_review_sha256": "2997050ab3a524e9d6fd383af176b35037ba2b4dfcf801378b1dda18ff47d3d0",
+  "mutated_review_sha256": "5270f4d771c36aa131646130f3ad1e4e34bc0fc854e9bfb10a38d7293d357ee8",
+  "restored_review_sha256": "2997050ab3a524e9d6fd383af176b35037ba2b4dfcf801378b1dda18ff47d3d0",
+  "integrity_experiment_passed": true,
+  "fresh_suite_observation": {
+    "parsed": true,
+    "executed": 39,
+    "failures": 1,
+    "errors": 1,
+    "skipped": 0,
+    "expected failures": 0,
+    "unexpected successes": 0,
+    "passed": 37,
+    "failing_tests": [
+      "test_output_csv_matches_required_schema_and_count (tests.test_day4_verification.TestDay4Verification.test_output_csv_matches_required_schema_and_count)"
+    ],
+    "error_tests": [
+      "test_output_csv_contains_all_expected_ids (tests.test_day4_verification.TestDay4Verification.test_output_csv_contains_all_expected_ids)"
+    ]
+  },
+  "scratch_removed": true,
+  "working_source_and_data_unchanged": true,
+  "protected_before": {
+    "category.py": "afc190fef915d712274b9cd6dc987d09ee6447d7c5d43747552d534ed01e8bf8",
+    "data/inbox.csv": "7aa7a7881e9d54cefcf958ff1ea4e00cc9887dee6e475fc12cec1fa82d219f14",
+    "data/invalid_inbox.csv": "ddfc977aaf75081c71976535cee2c9bacd9180fea947e2194bf24e2d949157c9",
+    "exporter.py": "5327ba0d258dccd04df56c7469fa95c5720511120e4674be29c26bce676e0d4b",
+    "main.py": "7a244bc4db42dbd18c044b27e74747d39446081d9c24a426206996c33f698283",
+    "priority.py": "b3239090ea7f57bd4432ac30274ac6be27e371829b1ef7e1475ea45351e5ee6e",
+    "review.py": "698bdd4c7ef55ff1d97cef3abdb08137a61c28e39107326f4051e1322cb9300e",
+    "tests/test_day4_verification.py": "49d8163e7d162e56342093a9dbb1989749b4da7761494623e68e8a5bfde18edf",
+    "tests/test_day5_adversarial.py": "69f704de3d7c0bd60656813c94552cc02b2664bf6221713cd468ffb48eb44f3f",
+    "tests/test_day5_block_d_diagnostic.py": "b8da2cf0f7919911eeafa96c0907780707199c515e7f2a0c6d7d1c8faf628d5b",
+    "tests/test_day5_negative_inputs.py": "f8c1174df3516d45f37aabdef5d3a102870e624ce695ac9afd49e868dce6b9bc",
+    "tests/test_export.py": "2045714236f488d24dd225593b28368573805a6b84f2a5b58338c32503868f9d",
+    "tests/test_priority.py": "ab7aba5aa44bee3db190bda0eaa0c233d8bfbb2f332467da63b86075eb5dd1fa",
+    "tests/test_reader.py": "bf8dd80ac456532c649aa26cb44f4c32afa57b370c061cffbeab00bb16dcf034",
+    "tests/test_review.py": "6954d46a9a6b8913a6b1cadfdc3a8ee6a7870be5dd8bb7bbac61d96a62e186de",
+    "tests/test_smoke.py": "1ed06985db05d7721ff631b567f5075bf3dc71f231bdefbc9d6c2ddf4a36186c"
+  },
+  "protected_after": {
+    "category.py": "afc190fef915d712274b9cd6dc987d09ee6447d7c5d43747552d534ed01e8bf8",
+    "data/inbox.csv": "7aa7a7881e9d54cefcf958ff1ea4e00cc9887dee6e475fc12cec1fa82d219f14",
+    "data/invalid_inbox.csv": "ddfc977aaf75081c71976535cee2c9bacd9180fea947e2194bf24e2d949157c9",
+    "exporter.py": "5327ba0d258dccd04df56c7469fa95c5720511120e4674be29c26bce676e0d4b",
+    "main.py": "7a244bc4db42dbd18c044b27e74747d39446081d9c24a426206996c33f698283",
+    "priority.py": "b3239090ea7f57bd4432ac30274ac6be27e371829b1ef7e1475ea45351e5ee6e",
+    "review.py": "698bdd4c7ef55ff1d97cef3abdb08137a61c28e39107326f4051e1322cb9300e",
+    "tests/test_day4_verification.py": "49d8163e7d162e56342093a9dbb1989749b4da7761494623e68e8a5bfde18edf",
+    "tests/test_day5_adversarial.py": "69f704de3d7c0bd60656813c94552cc02b2664bf6221713cd468ffb48eb44f3f",
+    "tests/test_day5_block_d_diagnostic.py": "b8da2cf0f7919911eeafa96c0907780707199c515e7f2a0c6d7d1c8faf628d5b",
+    "tests/test_day5_negative_inputs.py": "f8c1174df3516d45f37aabdef5d3a102870e624ce695ac9afd49e868dce6b9bc",
+    "tests/test_export.py": "2045714236f488d24dd225593b28368573805a6b84f2a5b58338c32503868f9d",
+    "tests/test_priority.py": "ab7aba5aa44bee3db190bda0eaa0c233d8bfbb2f332467da63b86075eb5dd1fa",
+    "tests/test_reader.py": "bf8dd80ac456532c649aa26cb44f4c32afa57b370c061cffbeab00bb16dcf034",
+    "tests/test_review.py": "6954d46a9a6b8913a6b1cadfdc3a8ee6a7870be5dd8bb7bbac61d96a62e186de",
+    "tests/test_smoke.py": "1ed06985db05d7721ff631b567f5075bf3dc71f231bdefbc9d6c2ddf4a36186c"
+  },
+  "finished_at_pkt": "2026-11-24T14:16:53.426966+05:00",
+  "execution_verified": true
+}

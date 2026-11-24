@@ -109,3 +109,8 @@ The PR description is a draft only. No PR creation, review approval, or merge is
 ## Day 6 Block A assistance - 2026-11-24T13:25:43.963494+05:00
 
 AI inspected the assignment and pushed baseline, prepared a local evidence collector and proposed draft PR text. This execution ran application/tests and recorded actual output; it does not establish independent understanding, colleague verification or mentor approval. Block B's independent ticket trace has not been completed by this automation.
+
+
+## Day 6 Block B - 2026-11-24T14:16:53.426966+05:00
+
+AI prepared the isolated test-integrity harness. It used a committed-source temporary copy, recorded real output, restored the intentional mutation and checked working-source hashes. Candidate trace and judgment are not generated or certified by the harness.

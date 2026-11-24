@@ -73,3 +73,8 @@ Evidence: docs/day5/BLOCK_F_HANDOVER.md.
 ## Day 6 Block A verification - 2026-11-24T13:25:43.963494+05:00
 
 Executed the supplied evidence collector; actual commands and outcomes are linked in docs/day6/BLOCK_A_BASELINE.md. PR completion, review and checkpoint submission remain separately tracked.
+
+
+## Day 6 Block B - 2026-11-24T14:16:53.426966+05:00
+
+Ran the Block B isolated verification helper. See docs/day6/BLOCK_B_EXECUTION.md for actual results; assertion review, findings and checkpoint submission remain separate.
